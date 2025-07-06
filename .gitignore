@@ -11,3 +11,6 @@ wheels/
 
 # Text files
 *.csv
+
+# Zip files
+*.zip
