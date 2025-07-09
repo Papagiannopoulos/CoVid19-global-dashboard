@@ -83,26 +83,24 @@ def load_data():
 def get_country_list(datalong):
     """Get list of all countries for search functionality"""
     countries = list(datalong['Country/Province'].unique())
-    countries.insert(0, 'Global')
-    return sorted(countries)
+    countries = sorted(countries)  # Sort the countries first
+    countries.insert(0, 'Global')  # Then insert Global at the beginning
+    return countries
 
 def calculate_metrics(datalong, total_per_country_wide, country_choice):
     """Calculate metrics for selected country or global"""
     if country_choice == 'Global':
-        # Global metrics
-        total = datalong.groupby(['Status', 'Date'])['Cases'].max().reset_index()
-        total = total.groupby('Status')['Cases'].max()
-        
-        confirmed_total = total.get('confirmed', 0)
-        deaths_total = total.get('death', 0) 
-        recovered_total = total.get('recovered', 0)
+        # Global metrics - sum all countries' totals from total_per_country_wide
+        confirmed_total = total_per_country_wide['confirmed'].sum()
+        deaths_total = total_per_country_wide['death'].sum()
+        recovered_total = total_per_country_wide['recovered'].sum()
         
         death_rate = (deaths_total / confirmed_total * 100) if confirmed_total > 0 else 0
         recovery_rate = (recovered_total / confirmed_total * 100) if confirmed_total > 0 else 0
         
         d = total_per_country_wide
         
-        # Recent data
+        # Recent data for global
         recent_data = datalong[datalong['Date'] > (datalong['Date'].max() - pd.Timedelta(days=7))]
         recent_data = recent_data.groupby(['Status'])['Daily_cases'].sum()
         
@@ -360,8 +358,8 @@ def create_country_analysis_plots(total_per_country_wide, n):
     
     return fig
 
-def create_map_visualization(datalong, selected_metric):
-    """Create interactive map visualization"""
+def create_map_visualization(datalong, selected_metric, enable_animation=False):
+    """Create interactive map visualization with optional animation"""
     # Prepare data for map
     map_data = datalong.copy()
     
@@ -374,13 +372,8 @@ def create_map_visualization(datalong, selected_metric):
                               pivot_data.get('recovered', 0))
     pivot_data['remaining'] = pivot_data['remaining'].clip(lower=0)
     
-    # Get latest data for each country
-    latest_data = pivot_data.groupby('Country/Province').last().reset_index()
-    latest_data = latest_data[latest_data[selected_metric] > 0]
-    
-    if latest_data.empty:
-        st.warning(f"No data available for {selected_metric}")
-        return None
+    # Remove rows with no location data
+    pivot_data = pivot_data.dropna(subset=['Lat', 'Long'])
     
     # Color mapping
     color_map = {
@@ -390,58 +383,217 @@ def create_map_visualization(datalong, selected_metric):
         'remaining': '#ff7f0e'
     }
     
-    # Create map
-    fig = go.Figure()
-    
-    max_cases = latest_data[selected_metric].max()
-    min_cases = latest_data[selected_metric][latest_data[selected_metric] > 0].min()
-    
-    if max_cases > min_cases:
-        normalized_size = ((np.log10(latest_data[selected_metric] + 1) - np.log10(min_cases + 1)) / 
-                          (np.log10(max_cases + 1) - np.log10(min_cases + 1)) * 25 + 5)
+    if enable_animation:
+        # Create animated map similar to notebook
+        # Get monthly data for animation
+        pivot_data['YearMonth'] = pivot_data['Date'].dt.to_period('M')
+        monthly_data = pivot_data.groupby(['Country/Province', 'YearMonth', 'Lat', 'Long']).agg({
+            'confirmed': 'max',
+            'death': 'max', 
+            'recovered': 'max',
+            'remaining': 'max'
+        }).reset_index()
+        
+        # Convert YearMonth back to datetime for animation
+        monthly_data['Date'] = monthly_data['YearMonth'].dt.to_timestamp()
+        
+        # Create frames for animation
+        frames = []
+        dates = sorted(monthly_data['Date'].unique())
+        
+        for date in dates:
+            frame_data = monthly_data[monthly_data['Date'] == date]
+            if frame_data.empty or frame_data[selected_metric].sum() == 0:
+                continue
+                
+            # Calculate normalized sizes
+            max_val = frame_data[selected_metric].max()
+            min_val = frame_data[selected_metric][frame_data[selected_metric] > 0].min()
+            
+            if max_val > min_val:
+                normalized_size = ((np.log10(frame_data[selected_metric] + 1) - np.log10(min_val + 1)) / 
+                                  (np.log10(max_val + 1) - np.log10(min_val + 1)) * 25 + 5)
+            else:
+                normalized_size = np.full(len(frame_data), 10)
+            
+            # Create hover text
+            hover_text = [f"<b>{country}</b><br>" + 
+                         f"Date: {date.strftime('%B %Y')}<br>" +
+                         f"Confirmed: {confirmed:,}<br>" + 
+                         f"Deaths: {deaths:,}<br>" + 
+                         f"Recovered: {recovered:,}<br>" + 
+                         f"Remaining: {remaining:,}<br>"
+                         for country, confirmed, deaths, recovered, remaining in 
+                         zip(frame_data['Country/Province'], frame_data['confirmed'],
+                             frame_data['death'], frame_data['recovered'], frame_data['remaining'])]
+            
+            frame_traces = [go.Scattergeo(
+                lon=frame_data['Long'], lat=frame_data['Lat'],
+                text=hover_text, mode='markers',
+                marker=dict(
+                    size=normalized_size,
+                    color=color_map[selected_metric],
+                    opacity=0.6,
+                    sizemode='diameter',
+                    line=dict(width=1, color='white')
+                ),
+                name=selected_metric.title(),
+                hovertemplate='%{text}<extra></extra>'
+            )]
+            
+            frames.append(go.Frame(
+                data=frame_traces,
+                name=date.strftime('%Y-%m-%d'),
+                layout=go.Layout(
+                    title_text=f"COVID-19 Global Status - {date.strftime('%B %Y')}"
+                )
+            ))
+        
+        # Create figure with animation
+        fig = go.Figure(data=frames[0].data if frames else [], frames=frames)
+        
+        # Add animation controls
+        fig.update_layout(
+            title={'text': f'Interactive COVID-19 World Map - {selected_metric.title()} Cases',
+                   'x': 0.5, 'font': {'size': 24, 'color': 'white'}},
+            geo=dict(
+                projection_type='natural earth',
+                showland=True, landcolor='rgb(50, 50, 50)',
+                coastlinecolor='rgb(100, 100, 100)',
+                showocean=True, oceancolor='rgb(20, 20, 20)',
+                showlakes=True, lakecolor='rgb(20, 20, 20)',
+                showcountries=True, countrycolor='rgb(100, 100, 100)',
+                bgcolor='rgb(30, 30, 30)'
+            ),
+            paper_bgcolor='rgb(30, 30, 30)',
+            plot_bgcolor='rgb(30, 30, 30)',
+            font=dict(color='white'),
+            legend=dict(
+                bgcolor='rgba(30, 30, 30, 0.8)',
+                bordercolor='rgb(100, 100, 100)',
+                borderwidth=1,
+                font=dict(color='white'),
+                x=0.02, y=0.98
+            ),
+            width=1200, height=700,
+            updatemenus=[{
+                'type': 'buttons',
+                'showactive': False,
+                'y': 0.2,
+                'x': 0.05,
+                'xanchor': 'left',
+                'yanchor': 'bottom',
+                'pad': {'t': 10, 'r': 10},
+                'buttons': [
+                    {
+                        'label': 'Play',
+                        'method': 'animate',
+                        'args': [None, {
+                            'frame': {'duration': 500, 'redraw': True},
+                            'fromcurrent': True,
+                            'transition': {'duration': 200}
+                        }]
+                    },
+                    {
+                        'label': 'Pause',
+                        'method': 'animate',
+                        'args': [[None], {
+                            'frame': {'duration': 0, 'redraw': False},
+                            'mode': 'immediate',
+                            'transition': {'duration': 0}
+                        }]
+                    }
+                ]
+            }],
+            sliders=[{
+                'active': 0,
+                'yanchor': 'bottom',
+                'xanchor': 'center',
+                'currentvalue': {
+                    'font': {'size': 16, 'color': 'white'},
+                    'prefix': 'Date: ',
+                    'visible': True,
+                    'xanchor': 'center'
+                },
+                'pad': {'b': 10, 't': 10},
+                'len': 0.9,
+                'x': 0.5,
+                'y': 0.05,
+                'steps': [{
+                    'args': [[frame.name], {
+                        'frame': {'duration': 300, 'redraw': True},
+                        'mode': 'immediate',
+                        'transition': {'duration': 200}
+                    }],
+                    'label': pd.to_datetime(frame.name).strftime('%b %Y'),
+                    'method': 'animate'
+                } for frame in frames]
+            }]
+        )
+        
     else:
-        normalized_size = np.full(len(latest_data), 10)
-    
-    hover_text = [f"<b>{country}</b><br>" + 
-                 f"Confirmed: {confirmed:,}<br>" + 
-                 f"Deaths: {deaths:,}<br>" + 
-                 f"Recovered: {recovered:,}<br>" + 
-                 f"Remaining: {remaining:,}<br>"
-                 for country, confirmed, deaths, recovered, remaining in 
-                 zip(latest_data['Country/Province'], latest_data['confirmed'],
-                     latest_data['death'], latest_data['recovered'], latest_data['remaining'])]
-    
-    fig.add_trace(go.Scattergeo(
-        lon=latest_data['Long'], lat=latest_data['Lat'],
-        text=hover_text, mode='markers',
-        marker=dict(
-            size=normalized_size,
-            color=color_map[selected_metric],
-            opacity=0.6,
-            sizemode='diameter',
-            line=dict(width=1, color='white')
-        ),
-        name=selected_metric.title(),
-        hovertemplate='%{text}<extra></extra>'
-    ))
-    
-    fig.update_layout(
-        title={'text': f'COVID-19 World Map - {selected_metric.title()} Cases',
-               'x': 0.5, 'font': {'size': 24, 'color': 'white'}},
-        geo=dict(
-            projection_type='natural earth',
-            showland=True, landcolor='rgb(50, 50, 50)',
-            coastlinecolor='rgb(100, 100, 100)',
-            showocean=True, oceancolor='rgb(20, 20, 20)',
-            showlakes=True, lakecolor='rgb(20, 20, 20)',
-            showcountries=True, countrycolor='rgb(100, 100, 100)',
-            bgcolor='rgb(30, 30, 30)'
-        ),
-        paper_bgcolor='rgb(30, 30, 30)',
-        plot_bgcolor='rgb(30, 30, 30)',
-        font=dict(color='white'),
-        width=1200, height=700
-    )
+        # Create static map with latest data
+        latest_data = pivot_data.groupby('Country/Province').last().reset_index()
+        latest_data = latest_data[latest_data[selected_metric] > 0]
+        
+        if latest_data.empty:
+            st.warning(f"No data available for {selected_metric}")
+            return None
+        
+        # Calculate normalized sizes
+        max_cases = latest_data[selected_metric].max()
+        min_cases = latest_data[selected_metric][latest_data[selected_metric] > 0].min()
+        
+        if max_cases > min_cases:
+            normalized_size = ((np.log10(latest_data[selected_metric] + 1) - np.log10(min_cases + 1)) / 
+                              (np.log10(max_cases + 1) - np.log10(min_cases + 1)) * 25 + 5)
+        else:
+            normalized_size = np.full(len(latest_data), 10)
+        
+        # Create hover text
+        hover_text = [f"<b>{country}</b><br>" + 
+                     f"Confirmed: {confirmed:,}<br>" + 
+                     f"Deaths: {deaths:,}<br>" + 
+                     f"Recovered: {recovered:,}<br>" + 
+                     f"Remaining: {remaining:,}<br>"
+                     for country, confirmed, deaths, recovered, remaining in 
+                     zip(latest_data['Country/Province'], latest_data['confirmed'],
+                         latest_data['death'], latest_data['recovered'], latest_data['remaining'])]
+        
+        # Create static map
+        fig = go.Figure()
+        
+        fig.add_trace(go.Scattergeo(
+            lon=latest_data['Long'], lat=latest_data['Lat'],
+            text=hover_text, mode='markers',
+            marker=dict(
+                size=normalized_size,
+                color=color_map[selected_metric],
+                opacity=0.6,
+                sizemode='diameter',
+                line=dict(width=1, color='white')
+            ),
+            name=selected_metric.title(),
+            hovertemplate='%{text}<extra></extra>'
+        ))
+        
+        fig.update_layout(
+            title={'text': f'COVID-19 World Map - {selected_metric.title()} Cases',
+                   'x': 0.5, 'font': {'size': 24, 'color': 'white'}},
+            geo=dict(
+                projection_type='natural earth',
+                showland=True, landcolor='rgb(50, 50, 50)',
+                coastlinecolor='rgb(100, 100, 100)',
+                showocean=True, oceancolor='rgb(20, 20, 20)',
+                showlakes=True, lakecolor='rgb(20, 20, 20)',
+                showcountries=True, countrycolor='rgb(100, 100, 100)',
+                bgcolor='rgb(30, 30, 30)'
+            ),
+            paper_bgcolor='rgb(30, 30, 30)',
+            plot_bgcolor='rgb(30, 30, 30)',
+            font=dict(color='white'),
+            width=1200, height=700
+        )
     
     return fig
 
@@ -503,6 +655,13 @@ def main():
         options=['confirmed', 'death', 'recovered', 'remaining'],
         index=0,
         help="Select which metric to display on the world map"
+    )
+    
+    # Animation toggle
+    enable_animation = st.sidebar.checkbox(
+        "🎬 Enable Map Animation",
+        value=False,
+        help="Enable time-based animation on the map (may take longer to load)"
     )
     
     st.sidebar.markdown("---")
@@ -614,10 +773,17 @@ def main():
     
     # Map visualization
     st.header("🗺️ Interactive World Map")
+    if enable_animation:
+        st.info("🎬 Animation enabled - this may take a moment to load...")
     with st.spinner('Creating map visualization...'):
-        map_fig = create_map_visualization(datalong, map_metric)
+        map_fig = create_map_visualization(datalong, map_metric, enable_animation)
         if map_fig:
             st.plotly_chart(map_fig, use_container_width=True)
+            if enable_animation:
+                st.markdown("### 🎬 Animation Controls")
+                st.markdown("- **Play/Pause**: Use the buttons to control animation")
+                st.markdown("- **Slider**: Drag to navigate through time periods")
+                st.markdown("- **Legend**: Click items to show/hide case types")
     
     # Footer
     st.markdown("---")
