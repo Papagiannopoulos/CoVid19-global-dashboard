@@ -56,7 +56,6 @@ def load_data():
         import pickle
         
          # Load processed data from CSV files
-        st.info("📊 Loading processed data from CSV files...")
         datalong = pd.read_csv('../Output/datalong.csv')
         total_per_country_wide = pd.read_csv('../Output/total_per_country_wide.csv')
         
@@ -657,17 +656,6 @@ def main():
         st.error("Failed to load data. Please check if the data files exist in the ../Data/ directory.")
         return
     
-    # Check data source and show indicator
-    import os
-    if (os.path.exists('../Output/datalong.pkl') and 
-        os.path.exists('../Output/total_per_country_wide.pkl')):
-        st.success("🚀 Using processed data from notebook (pickle format - fastest loading)")
-    elif (os.path.exists('../Output/datalong.csv') and 
-          os.path.exists('../Output/total_per_country_wide.csv')):
-        st.success("✅ Using processed data from notebook (CSV format - fast loading)")
-    else:
-        st.warning("⚠️ Using raw data processing (slower loading)")
-    
     # Sidebar
     st.sidebar.header("🎛️ Dashboard Controls")
     
@@ -700,7 +688,7 @@ def main():
     # Animation toggle
     enable_animation = st.sidebar.checkbox(
         "🎬 Enable Map Animation",
-        value=False,
+        value=True,
         help="Enable time-based animation on the map (may take longer to load)"
     )
     
@@ -710,22 +698,6 @@ def main():
     st.sidebar.markdown("🔴 **Red**: Deaths") 
     st.sidebar.markdown("🟢 **Green**: Recovered Cases")
     st.sidebar.markdown("🟠 **Orange**: Active Cases")
-    
-    # Data source information
-    st.sidebar.markdown("---")
-    st.sidebar.markdown("### 📊 Data Source")
-    import os
-    if (os.path.exists('../Output/datalong.pkl') and 
-        os.path.exists('../Output/total_per_country_wide.pkl')):
-        st.sidebar.success("🚀 Using pickle data (fastest)")
-        st.sidebar.markdown("*Optimized binary format*")
-    elif (os.path.exists('../Output/datalong.csv') and 
-          os.path.exists('../Output/total_per_country_wide.csv')):
-        st.sidebar.success("✅ Using CSV data (fast)")
-        st.sidebar.markdown("*Pre-processed format*")
-    else:
-        st.sidebar.warning("⚠️ Processing raw data")
-        st.sidebar.markdown("*Run notebook first*")
     
     st.sidebar.markdown("---")
     st.sidebar.markdown("💡 **Tip**: Run `data_cleaning.ipynb` to generate processed data for faster app startup!")
