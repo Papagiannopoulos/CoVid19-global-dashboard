@@ -230,7 +230,7 @@ def create_time_series_plots(datalong, country_choice):
     # Update layout
     fig.update_layout(
         height=800,
-        title={'text': f'📊 {country_choice}: COVID-19 Comprehensive Analysis',
+        title={'text': f'📊 {country_choice}: COVID-19 Overtime Analysis',
                'x': 0.5,'xanchor': 'center','font': {'size': 20, 'color': 'white'}},
         showlegend=False, 
         plot_bgcolor='rgb(30, 30, 30)',
@@ -449,9 +449,14 @@ def create_map_visualization(datalong, selected_metric, enable_animation=False):
             max_val = frame_data[selected_metric].max()
             min_val = frame_data[selected_metric][frame_data[selected_metric] > 0].min()
             
-            if max_val > min_val:
+            if pd.isna(max_val) or pd.isna(min_val) or max_val <= 0:
+                normalized_size = np.full(len(frame_data), 10)
+            elif max_val > min_val:
                 normalized_size = ((np.log10(frame_data[selected_metric] + 1) - np.log10(min_val + 1)) / 
                                   (np.log10(max_val + 1) - np.log10(min_val + 1)) * 25 + 5)
+                # Handle any NaN values that might still occur
+                normalized_size = np.where(np.isnan(normalized_size), 10, normalized_size)
+                normalized_size = np.where(normalized_size < 5, 5, normalized_size)
             else:
                 normalized_size = np.full(len(frame_data), 10)
             
@@ -583,9 +588,14 @@ def create_map_visualization(datalong, selected_metric, enable_animation=False):
         max_cases = latest_data[selected_metric].max()
         min_cases = latest_data[selected_metric][latest_data[selected_metric] > 0].min()
         
-        if max_cases > min_cases:
+        if pd.isna(max_cases) or pd.isna(min_cases) or max_cases <= 0:
+            normalized_size = np.full(len(latest_data), 10)
+        elif max_cases > min_cases:
             normalized_size = ((np.log10(latest_data[selected_metric] + 1) - np.log10(min_cases + 1)) / 
                               (np.log10(max_cases + 1) - np.log10(min_cases + 1)) * 25 + 5)
+            # Handle any NaN values that might still occur
+            normalized_size = np.where(np.isnan(normalized_size), 10, normalized_size)
+            normalized_size = np.where(normalized_size < 5, 5, normalized_size)
         else:
             normalized_size = np.full(len(latest_data), 10)
         
@@ -672,7 +682,7 @@ def main():
     n_countries = st.sidebar.slider(
         "📊 Number of countries to show:",
         min_value=3,
-        max_value=10,
+        max_value=25,
         value=5,
         help="Select how many top countries to display in the analysis"
     )
@@ -696,7 +706,7 @@ def main():
     st.sidebar.markdown("### 🎨 Color Legend")
     st.sidebar.markdown("🔵 **Blue**: Confirmed Cases")
     st.sidebar.markdown("🔴 **Red**: Deaths") 
-    st.sidebar.markdown("🟢 **Green**: Recovered Cases")
+    st.sidebar.markdown("🟢 **Green**: Recovered* Cases")
     st.sidebar.markdown("🟠 **Orange**: Active Cases")
     
     st.sidebar.markdown("---")
@@ -733,7 +743,7 @@ def main():
     with col3:
         st.markdown(f"""
         <div class="metric-container">
-            <div class="metric-title">Total Recovered</div>
+            <div class="metric-title">Total Recovered*</div>
             <div class="metric-value" style="color: #2ca02c;">{metrics['recovered_total']:,}</div>
         </div>
         """, unsafe_allow_html=True)
@@ -772,7 +782,7 @@ def main():
     st.markdown("---")
     
     # Time series plots
-    st.header("📊 Comprehensive Time Series Analysis")
+    st.header("📊 Time Series Analysis")
     with st.spinner('Creating comprehensive time series plots...'):
         time_series_fig = create_time_series_plots(datalong, selected_country)
         st.plotly_chart(time_series_fig, use_container_width=True)
@@ -786,7 +796,7 @@ def main():
         st.plotly_chart(country_fig, use_container_width=True)
     
     # Display ranking table
-    st.subheader("🏆 Country Rankings")
+    st.subheader("Country Rankings")
     top_countries = total_per_country_wide.head(n_countries)[['Country/Province', 'confirmed', 'death', 'recovered', 'active', 'death_rate', 'recovery_rate', 'Rank']]
     top_countries.columns = ['Country/Province', 'Confirmed', 'Deaths', 'Recovered', 'Active', 'Death Rate (%)', 'Recovery Rate (%)', 'Rank']
     st.dataframe(top_countries, use_container_width=True)
@@ -795,23 +805,20 @@ def main():
     
     # Map visualization
     st.header("🗺️ Interactive World Map")
-    if enable_animation:
-        st.info("🎬 Animation enabled - this may take a moment to load...")
     with st.spinner('Creating map visualization...'):
         map_fig = create_map_visualization(datalong, map_metric, enable_animation)
         if map_fig:
             st.plotly_chart(map_fig, use_container_width=True)
-            if enable_animation:
-                st.markdown("### 🎬 Animation Controls")
-                st.markdown("- **Play/Pause**: Use the buttons to control animation")
-                st.markdown("- **Slider**: Drag to navigate through time periods")
-                st.markdown("- **Legend**: Click items to show/hide case types")
     
     # Footer
     st.markdown("---")
     st.markdown("### 📝 Data Sources")
     st.markdown("Data sourced from Johns Hopkins University COVID-19 dataset via Kaggle")
-    st.markdown("*Recovery data may be underestimated due to limited reporting*")
+    st.markdown("## ***Recovery data for some countries (e.g., the US and Canada) may be underestimated due to limited or inconsistent reporting from original sources**")
+    
+    #Gituib
+    st.markdown("---")
+    st.markdown("📁 The full open-source project is hosted on my personal [GitHub](https://github.com/Papagiannopoulos)")
 
 if __name__ == "__main__":
     main()
