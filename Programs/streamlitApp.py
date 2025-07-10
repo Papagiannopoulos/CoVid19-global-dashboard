@@ -84,58 +84,88 @@ def get_country_list(datalong):
     return countries
 
 def calculate_metrics(datalong, total_per_country_wide, country_choice):
-    """Calculate metrics for selected country or global"""
+    """Calculate metrics for selected country or global using notebook logic"""
+    
+    # Load total_per_country from the notebook logic (since we only have total_per_country_wide in streamlit)
+    # We need to recreate total_per_country from the wide format
+    total_per_country = total_per_country_wide.melt(
+        id_vars=['Country/Province', 'Rank', 'average_daily_cases', 'average_daily_deaths'], 
+        value_vars=['confirmed', 'death', 'recovered', 'active', 'death_rate', 'recovery_rate'],
+        var_name='Status', value_name='Cases'
+    ).dropna()
+    
     if country_choice == 'Global':
-        # Global metrics - sum all countries' totals from total_per_country_wide
-        confirmed_total = total_per_country_wide['confirmed'].sum()
-        deaths_total = total_per_country_wide['death'].sum()
-        recovered_total = total_per_country_wide['recovered'].sum()
-        active_total = total_per_country_wide['active'].sum()
+        total = total_per_country.groupby('Status').agg({'Cases': 'sum', 'Country/Province': 'nunique'}).reset_index().copy()
+        total.loc[total['Status'].isin(['recovery_rate', 'death_rate']),"Cases"] = total.loc[total['Status'].isin(['recovery_rate', 'death_rate']),"Cases"] / total.loc[total['Status'].isin(['recovery_rate', 'death_rate']),"Country/Province"]
         
-        death_rate = (deaths_total / confirmed_total * 100) if confirmed_total > 0 else 0
-        recovery_rate = (recovered_total / confirmed_total * 100) if confirmed_total > 0 else 0
+        # Current week (last 7 days)
+        d = datalong[datalong['Date'] > (datalong['Date'].max() - pd.Timedelta(days=6))].copy()
+        d = d.groupby(['Status']).sum('Daily_cases').reset_index()
         
-        d = total_per_country_wide
+        # Previous week  
+        week = 1
+        dw = datalong[datalong['Date'].between(datalong['Date'].max() - pd.Timedelta(days=2*(6*week + 1)), datalong['Date'].max() - pd.Timedelta(days=(6*week + 1)))].copy()
+        dw = dw.groupby(['Status']).sum('Daily_cases').reset_index()
         
-        # Recent data for global
-        recent_data = datalong[datalong['Date'] > (datalong['Date'].max() - pd.Timedelta(days=7))]
-        recent_data = recent_data.groupby(['Status'])['Daily_cases'].sum()
+        # Extract totals
+        confirmed_total = total.loc[total['Status'] == 'confirmed', 'Cases'].sum()
+        deaths_total = total.loc[total['Status'] == 'death', 'Cases'].sum()
+        recovered_total = total.loc[total['Status'] == 'recovered', 'Cases'].sum()
+        active_total = total.loc[total['Status'] == 'active', 'Cases'].sum()
+        
+        death_rate = total.loc[total['Status'] == 'death_rate', 'Cases'].mean() if not total.loc[total['Status'] == 'death_rate', 'Cases'].empty else 0
+        recovery_rate = total.loc[total['Status'] == 'recovery_rate', 'Cases'].mean() if not total.loc[total['Status'] == 'recovery_rate', 'Cases'].empty else 0
+        
+        rank = 1  # Global is always rank 1
         
     else:
-        # Country-specific metrics
-        country_data = datalong[datalong['Country/Province'].str.contains(country_choice, regex=True, na=False)]
-        if country_data.empty:
+        total = total_per_country[total_per_country['Country/Province'].str.contains(country_choice, regex=True, na=False)].groupby('Status').agg({'Cases': 'sum', 'Country/Province': 'nunique'}).reset_index().copy()
+        total.loc[total['Status'].isin(['recovery_rate', 'death_rate']),"Cases"] = total.loc[total['Status'].isin(['recovery_rate', 'death_rate']),"Cases"] / total.loc[total['Status'].isin(['recovery_rate', 'death_rate']),"Country/Province"]
+        
+        # Current week
+        country = datalong[(datalong['Country/Province'].str.contains(country_choice, regex=True, na=False))].copy()
+        if country.empty:
             return None
             
-        total = country_data.groupby(['Status', 'Date'])['Cases'].max().reset_index()
-        total = total.groupby('Status')['Cases'].max()
+        d = country[country['Date'] > (country['Date'].max() - pd.Timedelta(days=6))].copy()
+        d = d.groupby(['Status']).sum('Daily_cases').reset_index()
         
-        confirmed_total = total.get('confirmed', 0)
-        deaths_total = total.get('death', 0)
-        recovered_total = total.get('recovered', 0)
-        active_total = total.get('active', 0)
+        # Previous week
+        week = 1
+        dw = country[country['Date'].between(country['Date'].max() - pd.Timedelta(days=2*(6*week + 1)), country['Date'].max() - pd.Timedelta(days=(6*week + 1)))].copy()
+        dw = dw.groupby(['Status']).sum('Daily_cases').reset_index()
         
-        death_rate = (deaths_total / confirmed_total * 100) if confirmed_total > 0 else 0
-        recovery_rate = (recovered_total / confirmed_total * 100) if confirmed_total > 0 else 0
+        # Extract totals
+        confirmed_total = total.loc[total['Status'] == 'confirmed', 'Cases'].sum() if not total.loc[total['Status'] == 'confirmed', 'Cases'].empty else 0
+        deaths_total = total.loc[total['Status'] == 'death', 'Cases'].sum() if not total.loc[total['Status'] == 'death', 'Cases'].empty else 0
+        recovered_total = total.loc[total['Status'] == 'recovered', 'Cases'].sum() if not total.loc[total['Status'] == 'recovered', 'Cases'].empty else 0
+        active_total = total.loc[total['Status'] == 'active', 'Cases'].sum() if not total.loc[total['Status'] == 'active', 'Cases'].empty else 0
         
-        d = total_per_country_wide[total_per_country_wide['Country/Province'].str.contains(country_choice, regex=True, na=False)]
+        death_rate = total.loc[total['Status'] == 'death_rate', 'Cases'].mean() if not total.loc[total['Status'] == 'death_rate', 'Cases'].empty else 0
+        recovery_rate = total.loc[total['Status'] == 'recovery_rate', 'Cases'].mean() if not total.loc[total['Status'] == 'recovery_rate', 'Cases'].empty else 0
         
-        # Recent data
-        recent_data = country_data[country_data['Date'] > (country_data['Date'].max() - pd.Timedelta(days=7))]
-        recent_data = recent_data.groupby(['Status'])['Daily_cases'].sum()
+        # Get rank from total_per_country_wide
+        country_rank_data = total_per_country_wide[total_per_country_wide['Country/Province'].str.contains(country_choice, regex=True, na=False)]
+        rank = country_rank_data['Rank'].min() if not country_rank_data.empty else 0
+    
+    # Extract recent data (current and previous week)
+    current_confirmed = int(d.loc[d['Status'] == 'confirmed', 'Daily_cases'].values[0]) if not d.loc[d['Status'] == 'confirmed', 'Daily_cases'].empty else 0
+    current_death = int(d.loc[d['Status'] == 'death', 'Daily_cases'].values[0]) if not d.loc[d['Status'] == 'death', 'Daily_cases'].empty else 0
+    current_recovered = int(d.loc[d['Status'] == 'recovered', 'Daily_cases'].values[0]) if not d.loc[d['Status'] == 'recovered', 'Daily_cases'].empty else 0
+    current_active = int(d.loc[d['Status'] == 'active', 'Daily_cases'].values[0]) if not d.loc[d['Status'] == 'active', 'Daily_cases'].empty else 0
     
     return {
-        'confirmed_total': int(confirmed_total),
-        'deaths_total': int(deaths_total),
-        'recovered_total': int(recovered_total),
-        'active_total': int(active_total),
-        'death_rate': death_rate,
-        'recovery_rate': recovery_rate,
-        'recent_confirmed': int(recent_data.get('confirmed', 0)),
-        'recent_deaths': int(recent_data.get('death', 0)),
-        'recent_recovered': int(recent_data.get('recovered', 0)),
-        'recent_active': int(recent_data.get('active', 0)),
-        'rank': int(d['Rank'].min()) if not d.empty else 0
+        'confirmed_total': int(confirmed_total) if not pd.isna(confirmed_total) else 0,
+        'deaths_total': int(deaths_total) if not pd.isna(deaths_total) else 0,
+        'recovered_total': int(recovered_total) if not pd.isna(recovered_total) else 0,
+        'active_total': int(active_total) if not pd.isna(active_total) else 0,
+        'death_rate': death_rate if not pd.isna(death_rate) else 0,
+        'recovery_rate': recovery_rate if not pd.isna(recovery_rate) else 0,
+        'recent_confirmed': current_confirmed,
+        'recent_deaths': current_death,
+        'recent_recovered': current_recovered,
+        'recent_active': current_active,
+        'rank': int(rank) if not pd.isna(rank) else 0
     }
 
 def create_time_series_plots(datalong, country_choice, total_per_country_wide):
@@ -321,26 +351,39 @@ def create_country_analysis_plots(total_per_country_wide, n):
     
     return fig
 
-def create_map_visualization(datalong, selected_metric, enable_animation=False):
+def create_map_visualization(datalong, selected_metric, enable_animation=False, show_daily_cases=False):
     """Create interactive map visualization with optional animation"""
     # Prepare data for map
     map_data = datalong.copy()
     
-    # Calculate active cases from pivot data
-    pivot_data = map_data.pivot_table(
-        index=['Country/Province', 'Date', 'Lat', 'Long'], 
-        columns='Status', values='Cases', fill_value=0).reset_index()
-    
-    # Ensure all required columns exist
-    required_cols = ['confirmed', 'death', 'recovered', 'active']
-    for col in required_cols:
-        if col not in pivot_data.columns:
-            if col == 'active':
-                pivot_data[col] = (pivot_data.get('confirmed', 0) - 
-                                  pivot_data.get('death', 0) - 
-                                  pivot_data.get('recovered', 0)).clip(lower=0)
-            else:
+    if show_daily_cases:
+        # Use daily cases data
+        daily_data = map_data[map_data['Status'] == selected_metric].copy()
+        pivot_data = daily_data.pivot_table(
+            index=['Country/Province', 'Date', 'Lat', 'Long'], 
+            columns=[], values='Daily_cases', fill_value=0, aggfunc='sum').reset_index()
+        pivot_data[selected_metric] = pivot_data['Daily_cases']
+        
+        # Add other metrics as zero for consistency in hover text
+        for col in ['confirmed', 'death', 'recovered', 'active']:
+            if col != selected_metric:
                 pivot_data[col] = 0
+    else:
+        # Use cumulative cases data (original behavior)
+        pivot_data = map_data.pivot_table(
+            index=['Country/Province', 'Date', 'Lat', 'Long'], 
+            columns='Status', values='Cases', fill_value=0).reset_index()
+        
+        # Ensure all required columns exist
+        required_cols = ['confirmed', 'death', 'recovered', 'active']
+        for col in required_cols:
+            if col not in pivot_data.columns:
+                if col == 'active':
+                    pivot_data[col] = (pivot_data.get('confirmed', 0) - 
+                                      pivot_data.get('death', 0) - 
+                                      pivot_data.get('recovered', 0)).clip(lower=0)
+                else:
+                    pivot_data[col] = 0
     
     # Remove rows with no location data
     pivot_data = pivot_data.dropna(subset=['Lat', 'Long'])
@@ -428,8 +471,9 @@ def create_map_visualization(datalong, selected_metric, enable_animation=False):
         fig = go.Figure(data=frames[0].data if frames else [], frames=frames)
         
         # Add animation controls
+        title_prefix = "Daily" if show_daily_cases else "Cumulative"
         fig.update_layout(
-            title={'text': f'Interactive COVID-19 World Map - {selected_metric.title()} Cases',
+            title={'text': f'Interactive COVID-19 World Map - {title_prefix} {selected_metric.title()} Cases',
                    'x': 0.5, 'font': {'size': 24, 'color': 'white'}},
             geo=dict(
                 projection_type='natural earth',
@@ -543,6 +587,8 @@ def create_map_visualization(datalong, selected_metric, enable_animation=False):
         # Create static map
         fig = go.Figure()
         
+        title_prefix = "Daily" if show_daily_cases else "Cumulative"
+        
         fig.add_trace(go.Scattergeo(
             lon=latest_data['Long'], lat=latest_data['Lat'],
             text=hover_text, mode='markers',
@@ -558,7 +604,7 @@ def create_map_visualization(datalong, selected_metric, enable_animation=False):
         ))
         
         fig.update_layout(
-            title={'text': f'COVID-19 World Map - {selected_metric.title()} Cases',
+            title={'text': f'COVID-19 World Map - {title_prefix} {selected_metric.title()} Cases',
                    'x': 0.5, 'font': {'size': 24, 'color': 'white'}},
             geo=dict(
                 projection_type='natural earth',
@@ -631,6 +677,13 @@ def main():
         "🎬 Enable Map Animation",
         value=True,
         help="Enable time-based animation on the map (may take longer to load)"
+    )
+    
+    # Daily cases toggle
+    show_daily_cases = st.sidebar.checkbox(
+        "📊 Show Daily Cases on Map",
+        value=False,
+        help="Toggle between cumulative and daily cases on the map"
     )
     
     st.sidebar.markdown("---")
@@ -737,7 +790,7 @@ def main():
     # Map visualization
     st.header("🗺️ Interactive World Map")
     with st.spinner('Creating map visualization...'):
-        map_fig = create_map_visualization(datalong, map_metric, enable_animation)
+        map_fig = create_map_visualization(datalong, map_metric, enable_animation, show_daily_cases)
         if map_fig:
             st.plotly_chart(map_fig, use_container_width=True)
     
@@ -745,7 +798,7 @@ def main():
     st.markdown("---")
     st.markdown("### 📝 Data Sources")
     st.markdown("Data sourced from Johns Hopkins University COVID-19 dataset via Kaggle")
-    st.markdown("### ***Recovery data for some countries (e.g., the US and Canada) may be underestimated due to limited or inconsistent reporting from original sources**")
+    st.markdown("#### ***Recovery data for some countries (e.g., the US and Canada) may be underestimated due to limited or inconsistent reporting from original sources**")
     
     #Gituib
     st.markdown("---")
