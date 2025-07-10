@@ -138,99 +138,60 @@ def calculate_metrics(datalong, total_per_country_wide, country_choice):
         'rank': int(d['Rank'].min()) if not d.empty else 0
     }
 
-def create_time_series_plots(datalong, country_choice):
+def create_time_series_plots(datalong, country_choice, total_per_country_wide):
     """Create time series plots for selected country"""
     if country_choice == 'Global':
         confirmed_data = datalong[datalong['Status'] == 'confirmed'].copy()
         death_data = datalong[datalong['Status'] == 'death'][['Country/Province', 'Date', 'Cases','Daily_cases']].copy()
-        recovered_data = datalong[datalong['Status'] == 'recovered'][['Country/Province', 'Date', 'Cases','Daily_cases']].copy()
-        active_data = datalong[datalong['Status'] == 'active'][['Country/Province', 'Date', 'Cases','Daily_cases']].copy()
+        death_data.columns = ['Country/Province', 'Date', 'Death','Daily_death']
+        d = total_per_country_wide
     else:
         confirmed_data = datalong[(datalong['Country/Province'].str.contains(country_choice, regex=True, na=False)) & (datalong['Status'] == 'confirmed')].copy()
         death_data = datalong[(datalong['Country/Province'].str.contains(country_choice, regex=True, na=False)) & (datalong['Status'] == 'death')][['Country/Province', 'Date', 'Cases','Daily_cases']].copy()
-        recovered_data = datalong[(datalong['Country/Province'].str.contains(country_choice, regex=True, na=False)) & (datalong['Status'] == 'recovered')][['Country/Province', 'Date', 'Cases','Daily_cases']].copy()
-        active_data = datalong[(datalong['Country/Province'].str.contains(country_choice, regex=True, na=False)) & (datalong['Status'] == 'active')][['Country/Province', 'Date', 'Cases','Daily_cases']].copy()
+        death_data.columns = ['Country/Province', 'Date', 'Death','Daily_death']
+        d = total_per_country_wide[total_per_country_wide['Country/Province'].str.contains(country_choice, regex=True, na=False)]
     
-    death_data.columns = ['Country/Province', 'Date', 'Death','Daily_death']
-    recovered_data.columns = ['Country/Province', 'Date', 'Recovered','Daily_recovered']
-    active_data.columns = ['Country/Province', 'Date', 'Active','Daily_active']
-    
-    # Aggregate data
+    # Global total confirmed/death cases over time
     global_daily = confirmed_data.groupby('Date').agg({'Cases': 'sum','Daily_cases': 'sum'}).reset_index()
     death_daily = death_data.groupby('Date').agg({'Death': 'sum','Daily_death': 'sum'}).reset_index()
-    recovered_daily = recovered_data.groupby('Date').agg({'Recovered': 'sum','Daily_recovered': 'sum'}).reset_index()
-    active_daily = active_data.groupby('Date').agg({'Active': 'sum','Daily_active': 'sum'}).reset_index()
-    
     global_daily = global_daily.merge(death_daily, on=['Date'], how='left')
-    global_daily = global_daily.merge(recovered_daily, on=['Date'], how='left')
-    global_daily = global_daily.merge(active_daily, on=['Date'], how='left')
     
     # Create subplots
     fig = ps(rows=2, cols=2, 
              subplot_titles=[f'{country_choice} Cumulative Cases', f'{country_choice} Daily New Cases',
-                           f'{country_choice} Active vs Recovered', f'{country_choice} Status Distribution'],
+                           f'{country_choice} Cumulative Deaths', f'{country_choice} Daily New Deaths'],
              specs=[[{"secondary_y": False}, {"secondary_y": False}],
                    [{"secondary_y": False}, {"secondary_y": False}]],
              horizontal_spacing=0.08, vertical_spacing=0.1)
     
-    # Plot 1: Cumulative cases
+    # Plot 1: Global cumulative cases
     fig.add_trace(go.Scatter(x=global_daily['Date'], y=global_daily['Cases'],
-        mode='lines',line=dict(color='#1f77b4', width=3, shape='spline', smoothing=0.3),
-        fill='tonexty',fillcolor='rgba(31,119,180,0.2)',name='Confirmed Cases',
-        hovertemplate='<b>Cumulative Cases</b><br>Date: %{x}<br>Cases: %{y:,}<br>Deaths: %{customdata[0]:,}<br>Active: %{customdata[1]:,}<extra></extra>',
-        customdata=global_daily[['Death', 'Active']].values
+        mode='lines',line=dict(color='#1f77b4', width=5),fill='tonexty',fillcolor='rgba(31,119,180,0.3)',name='',
+        hovertemplate='Date: %{x}<br>Cases: %{y:,}<br>Deaths: %{customdata[0]:,}<extra></extra>',customdata=global_daily[['Death']].values
     ), row=1, col=1)
     
-    # Plot 2: Daily new cases
+    # Plot 2: Global daily new cases
     fig.add_trace(go.Scatter(x=global_daily['Date'], y=global_daily['Daily_cases'],
-        mode='lines+markers',line=dict(color='#1f77b4', width=2, shape='spline', smoothing=0.3),
-        marker=dict(size=4, color='#1f77b4', opacity=0.6),
-        fill='tozeroy',fillcolor='rgba(31,119,180,0.2)', name='Daily New Cases',
-        hovertemplate='<b>Daily New Cases</b><br>Date: %{x}<br>Cases: %{y:,}<br>Deaths: %{customdata[0]:,}<br>Active: %{customdata[1]:,}<extra></extra>',
-        customdata=global_daily[['Daily_death', 'Daily_active']].values
+        mode='lines',line=dict(color='#1f77b4', width=3),fill='tozeroy',fillcolor='rgba(31,119,180,0.3)', name='',
+        hovertemplate='Date: %{x}<br>Cases: %{y:,}<br>Deaths: %{customdata[0]:,}<extra></extra>',customdata=global_daily[['Daily_death']].values
     ), row=1, col=2)
     
-    # Plot 3: Active vs Recovered
-    fig.add_trace(go.Scatter(x=global_daily['Date'], y=global_daily['Active'],
-        mode='lines',line=dict(color='#ff7f0e', width=3, shape='spline', smoothing=0.3),
-        fill='tonexty',fillcolor='rgba(255,127,14,0.2)',name='Active Cases',
-        hovertemplate='<b>Active Cases</b><br>Date: %{x}<br>Active: %{y:,}<br>Recovered: %{customdata[0]:,}<extra></extra>',
-        customdata=global_daily[['Recovered']].values
-    ), row=2, col=1)
-    
-    fig.add_trace(go.Scatter(x=global_daily['Date'], y=global_daily['Recovered'],
-        mode='lines',line=dict(color='#2ca02c', width=3, shape='spline', smoothing=0.3),
-        fill='tonexty',fillcolor='rgba(44,160,44,0.2)',name='Recovered Cases',
-        hovertemplate='<b>Recovered Cases</b><br>Date: %{x}<br>Recovered: %{y:,}<br>Active: %{customdata[0]:,}<extra></extra>',
-        customdata=global_daily[['Active']].values
-    ), row=2, col=1)
-    
-    # Plot 4: Status distribution (stacked area)
-    fig.add_trace(go.Scatter(x=global_daily['Date'], y=global_daily['Active'],
-        mode='lines',line=dict(color='#ff7f0e', width=2),
-        fill='tozeroy',fillcolor='rgba(255,127,14,0.7)', name='Active',
-        hovertemplate='<b>Active</b><br>Date: %{x}<br>Cases: %{y:,}<extra></extra>',
-        stackgroup='one'
-    ), row=2, col=2)
-    
-    fig.add_trace(go.Scatter(x=global_daily['Date'], y=global_daily['Recovered'],
-        mode='lines',line=dict(color='#2ca02c', width=2),
-        fill='tonexty',fillcolor='rgba(44,160,44,0.7)', name='Recovered',
-        hovertemplate='<b>Recovered</b><br>Date: %{x}<br>Cases: %{y:,}<extra></extra>',
-        stackgroup='one'
-    ), row=2, col=2)
-    
+    # Plot 3: Global cumulative deaths
     fig.add_trace(go.Scatter(x=global_daily['Date'], y=global_daily['Death'],
-        mode='lines',line=dict(color='#d62728', width=2),
-        fill='tonexty',fillcolor='rgba(214,39,40,0.7)', name='Deaths',
-        hovertemplate='<b>Deaths</b><br>Date: %{x}<br>Cases: %{y:,}<extra></extra>',
-        stackgroup='one'
+        mode='lines',line=dict(color='#d62728', width=5),fill='tonexty',fillcolor='rgba(214,39,40,0.3)',name='',
+        hovertemplate='Date: %{x}<br>Cases: %{y:,}<br>Confirmed: %{customdata[0]:,}<extra></extra>',customdata=global_daily[['Cases']].values
+    ), row=2, col=1)
+    
+    # Plot 4: Global daily new deaths
+    fig.add_trace(go.Scatter(x=global_daily['Date'], y=global_daily['Daily_death'],
+        mode='lines',line=dict(color='#d62728', width=3),fill='tozeroy',fillcolor='rgba(214,39,40,0.3)', name='',
+        hovertemplate='Date: %{x}<br>Cases: %{y:,}<br>Confirmed: %{customdata[0]:,}<extra></extra>',customdata=global_daily[['Daily_cases']].values
     ), row=2, col=2)
     
     # Update layout
     fig.update_layout(
-        height=800,
-        title={'text': f'📊 {country_choice}: COVID-19 Overtime Analysis',
+        width=1600, height=1000,
+        title={'text': f'📊 {country_choice}: COVID-19 New Cases & Deaths Over Time',
                'x': 0.5,'xanchor': 'center','font': {'size': 20, 'color': 'white'}},
         showlegend=False, 
         plot_bgcolor='rgb(30, 30, 30)',
@@ -239,51 +200,21 @@ def create_time_series_plots(datalong, country_choice):
     )
     
     # Update axes
-    fig.update_xaxes(showgrid=False, tickfont=dict(size=10, color='white'),
-                     rangeslider_visible=False,
-                     rangeselector=dict(
-                         buttons=list([
-                             dict(count=1, label="1M", step="month", stepmode="backward"),
-                             dict(count=3, label="3M", step="month", stepmode="backward"),
-                             dict(count=6, label="6M", step="month", stepmode="backward"),
-                             dict(count=1, label="1Y", step="year", stepmode="backward"),
-                             dict(step="all")
-                         ]),
-                         bgcolor='rgb(50, 50, 50)',
-                         activecolor='rgb(100, 100, 100)',
-                         font=dict(color='white'),
-                         x=0.01, y=1.02
-                     ),
-                     row=1, col=1)
-    fig.update_yaxes(showgrid=True,gridcolor='rgb(100, 100, 100)',gridwidth=0.5,griddash='dash', 
-                     tickfont=dict(size=15, color='white'))
+    fig.update_xaxes(showgrid=False, tickfont=dict(size=10, color='white'))
+    fig.update_yaxes(showgrid=True,gridcolor='rgb(100, 100, 100)',gridwidth=0.5,griddash='dash', tickfont=dict(size=15, color='white'))
     
-    # Add annotations for peaks
-    if not global_daily.empty and global_daily['Daily_cases'].max() > 0:
-        max_daily_case_date = global_daily.loc[global_daily['Daily_cases'].idxmax(), 'Date']
-        max_daily_case = global_daily['Daily_cases'].max()
-        max_daily_active_value = global_daily['Daily_active'].iloc[global_daily['Daily_cases'].idxmax()]
-        
-        fig.add_annotation(
-            x=max_daily_case_date,y=max_daily_case,
-            text=f"🔺 Peak Daily Cases<br>📅 {max_daily_case_date.strftime('%b %d, %Y')}<br>📊 {max_daily_case:,.0f} cases<br>� {max_daily_active_value:,.0f} active",
-            showarrow=True,arrowhead=2,arrowsize=1,arrowwidth=2,arrowcolor="white",
-            ax=40,ay=-60,bgcolor="rgba(31,119,180,0.9)",bordercolor="white",borderwidth=2,
-            font=dict(color='white', size=11),row=1, col=2
-        )
-    
-    if not global_daily.empty and global_daily['Active'].max() > 0:
-        max_active_date = global_daily.loc[global_daily['Active'].idxmax(), 'Date']
-        max_active = global_daily['Active'].max()
-        max_recovered_value = global_daily['Recovered'].iloc[global_daily['Active'].idxmax()]
-        
-        fig.add_annotation(
-            x=max_active_date,y=max_active,
-            text=f"🔺 Peak Active Cases<br>📅 {max_active_date.strftime('%b %d, %Y')}<br>� {max_active:,.0f} active<br>� {max_recovered_value:,.0f} recovered",
-            showarrow=True,arrowhead=2,arrowsize=1,arrowwidth=2,arrowcolor="white",
-            ax=40,ay=-60,bgcolor="rgba(255,127,14,0.9)",bordercolor="white",borderwidth=2,
-            font=dict(color='white', size=11),row=2, col=1
-        )
+    # Add annotations
+    max_daily_case_date = global_daily.loc[global_daily['Daily_cases'].idxmax(), 'Date']
+    max_daily_case = global_daily['Daily_cases'].max()
+    max_daily_death_value = global_daily['Daily_death'].iloc[global_daily['Daily_cases'].idxmax()]
+    fig.add_annotation(x=max_daily_case_date,y=max_daily_case,text=f"Peak Daily Cases<br>Date: {max_daily_case_date.strftime('%Y-%m-%d')}<br>Confirmed: {max_daily_case:,.0f}<br>Deaths: {max_daily_death_value:,.0f}",
+    showarrow=False,arrowhead=1,arrowsize=1,arrowwidth=3,arrowcolor="white",ax=20,ay=-30,bgcolor="#1f77b4",bordercolor="white",borderwidth=2,font=dict(color='white'),row=1, col=2)
+
+    max_daily_death_date = global_daily.loc[global_daily['Daily_death'].idxmax(), 'Date']
+    max_daily_death = global_daily['Daily_death'].max()
+    max_daily_case_value = global_daily['Daily_cases'].iloc[global_daily['Daily_death'].idxmax()]
+    fig.add_annotation(x=max_daily_death_date,y=max_daily_death,text=f"Peak Daily Deaths<br>Date: {max_daily_death_date.strftime('%Y-%m-%d')}<br>Confirmed: {max_daily_death:,.0f}<br>Deaths: {max_daily_case_value:,.0f}",
+    showarrow=False,arrowhead=1,arrowsize=1,arrowwidth=3,arrowcolor="white",ax=20,ay=-30,bgcolor="#d62728",bordercolor="white",borderwidth=2,font=dict(color='white'),row=2, col=2)
     
     return fig
 
@@ -784,7 +715,7 @@ def main():
     # Time series plots
     st.header("📊 Time Series Analysis")
     with st.spinner('Creating comprehensive time series plots...'):
-        time_series_fig = create_time_series_plots(datalong, selected_country)
+        time_series_fig = create_time_series_plots(datalong, selected_country, total_per_country_wide)
         st.plotly_chart(time_series_fig, use_container_width=True)
     
     st.markdown("---")
@@ -814,7 +745,7 @@ def main():
     st.markdown("---")
     st.markdown("### 📝 Data Sources")
     st.markdown("Data sourced from Johns Hopkins University COVID-19 dataset via Kaggle")
-    st.markdown("## ***Recovery data for some countries (e.g., the US and Canada) may be underestimated due to limited or inconsistent reporting from original sources**")
+    st.markdown("### ***Recovery data for some countries (e.g., the US and Canada) may be underestimated due to limited or inconsistent reporting from original sources**")
     
     #Gituib
     st.markdown("---")
