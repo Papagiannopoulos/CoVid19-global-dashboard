@@ -1,5 +1,5 @@
 # 🦠 **COVID-19 Globe Dashboard** 
-#### 🎯 ***Aim***: Visualize and analyze daily level COVID-19 cases worldwide through interactive web application built with **Streamlit**. <img src="https://streamlit.io/images/brand/streamlit-logo-secondary-colormark-darktext.png" width="50"/>  
+#### 🎯 ***Aim***: Visualize and analyze daily level COVID-19 cases worldwide through interactive web application built with **Streamlit**. <img src="https://streamlit.io/images/brand/streamlit-logo-secondary-colormark-darktext.png" width="60"/>  
 
 ## Project Summary 
 This dashboard provides (real-time) insights into the pandemic's progression overtime from Jan/20 till May/21.
@@ -11,10 +11,10 @@ This dashboard provides (real-time) insights into the pandemic's progression ove
 
 ### Table of Contents
 1. 🔍 **[ Dataset](#-dataset)** - Data source  
-2. 🧹 **[ Data Processing or Methods](#-data-processing)** - Cleaning and feature engineering  
+2. 🧹 **[ Data Processing or Methods](#data-processing)** - Cleaning and feature engineering  
 3. 📊 **[ EDA](#-eda)** - Key insights and patterns  
-4. <img src="https://streamlit.io/images/brand/streamlit-logo-secondary-colormark-darktext.png" width="40"/> **[ Streamlit app](#-streamlit-app)** - Dashboard features  
-5. ▶️ **[ Insights/Results 1](#-insights/Results-1)** - text  
+4. <img src="https://streamlit.io/images/brand/streamlit-logo-secondary-colormark-darktext.png" width="60"/> **[ Streamlit app](#-streamlit-app)** - Dashboard features  
+5. ▶️ **[ Insights/Results 1](#%EF%B8%8F-insightsresults-1)** - text  
 6. 🔍**[ Findngs Implications/Conclusions](#-findngs-Implications/Conclusions)** - Next steps and improvements  
 7. 🚀 **[ Future Enhancements](#-future-enhancements)** - Next steps and improvements  
 8. 🔁 **[ Reproducibility](#-reproducibility)** - Reproducibility steps  
