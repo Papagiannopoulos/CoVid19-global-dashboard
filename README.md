@@ -1,7 +1,5 @@
 # 🦠 **COVID-19 Globe Dashboard** 
-
-🎯 ***Aim***: Visualize and analyze daily level COVID-19 information (confirmed/recovered/active cases & deaths) worldwide through interactive web application built with **Streamlit**.  
-![Streamlit](https://streamlit.io/images/brand/streamlit-logo-secondary-colormark-darktext.png)
+#### 🎯 ***Aim***: Visualize and analyze daily level COVID-19 information (confirmed/recovered/active cases & deaths) worldwide through interactive web application built with **Streamlit**. <img src="https://streamlit.io/images/brand/streamlit-logo-secondary-colormark-darktext.png" width="25"/>  
 
 ## Project Summary 
 This dashboard provides (real-time) insights into the pandemic's progression overtime from Jan/20 till May/21.
@@ -15,11 +13,8 @@ This dashboard provides (real-time) insights into the pandemic's progression ove
 1. 🔍 **[ Dataset](#-dataset)** - Data source  
 2. 🧹 **[ Data Processing or Methods](#-data-processing)** - Cleaning and feature engineering  
 3. 📊 **[ EDA](#-eda)** - Key insights and patterns  
-4. 🧹 **[ Streamlit app](#-streamlit-app)** - Dashboard features  
-4a. ▶️ **[ Insights/Results 1](#-insights/Results-1)** - text  
-4b. ▶️ **[ Insights/Results 2](#-insights/Results-2)** - text  
-4c. ▶️ **[ Insights/Results 3](#-insights/Results-3)** - text  
-5. **[ Discussion](#Discussion)** - Next steps and improvements
+4. <img src="https://streamlit.io/images/brand/streamlit-logo-secondary-colormark-darktext.png" width="20"/> **[ Streamlit app](#-streamlit-app)** - Dashboard features  
+5. ▶️ **[ Insights/Results 1](#-insights/Results-1)** - text  
 6. 🔍**[ Findngs Implications/Conclusions](#-findngs-Implications/Conclusions)** - Next steps and improvements  
 7.  **[ Future Enhancements](#-future-enhancements)** - Next steps and improvements  
 8. 🔁 **[ Reproducibility](#-reproducibility)** - Reproducibility steps  
@@ -35,21 +30,21 @@ More info about data is available at the following link.
 2) **Feature Engineering**: Created active cases, daily/comulative cases, date components, metrics (death/recovery rate, overall, date dependent) for visualisations  
 
 ## Streamlit app
-### 🛠️ Technology Stack
-- **Frontend**: Streamlit
+#### 🛠️ Technology Stack
+- **Tool**: Streamlit
 - **Visualizations**: Plotly (interactive charts and maps)
 - **Data Processing**: Pandas, NumPy
 
-### 📈 Key Metrics Tracked
+#### 📈 Key Metrics Tracked
 - Total Confirmed Cases
 - Total Deaths
-- Total Recovered Cases*
+- Total Recovered Cases ()
 - Active Cases
 - Death Rate & Recovery Rate
 - Recent 7-day trends
 - Global Rankings
 
-### 📊 Interactive Visualizations
+#### 📊 Interactive Visualizations
 - **Real-time Metrics**: Key performance indicators with recent trends
 - **Time Series Analysis**: Dynamic 2x2 subplot layout showing cumulative and daily cases/deaths
 - **Country Analysis**: Comparative bar charts for top countries by various metrics
@@ -57,23 +52,23 @@ More info about data is available at the following link.
 
 ## 📊 Dashboard Sections
 
-### 1. Metrics Overview
+#### 1. Metrics Overview
 - Key statistics displayed in visually appealing metric cards
 - Recent 7-day trends with change indicators
 - Global ranking information
 
-### 2. Time Series Analysis
+#### 2. Time Series Analysis
 - 2x2 subplot layout matching notebook visualizations
 - Cumulative and daily cases/deaths
 - Peak annotations with detailed information
 - Interactive zoom and pan capabilities
 
-### 3. Country Analysis
+#### 3. Country Analysis
 - Top N countries by deaths and active cases
 - Death rate and recovery rate analysis
 - Detailed hover information and rankings table
 
-### 4. Interactive World Map
+#### 4. Interactive World Map
 - Geographic visualization with circle markers
 - Size proportional to case numbers
 - Time-based animation controls
@@ -86,15 +81,6 @@ More info about data is available at the following link.
 ## ▶️ Insights/Results 1
 
 
-## ▶️ Insights/Results 2
-
-
-## ▶️ Insights/Results 3
-
-
-## ▶️ Discussion
-
-
 ## 🔍 Findngs Implications/Conclusions
 ### Data-Driven Decision Making
 - **Public Health Officials**: Monitor pandemic progression and identify hotspots
@@ -104,16 +90,15 @@ More info about data is available at the following link.
 
 ##  Future Enhancements
 
-### 📈 Enhanced Analytics
+#### 📈 Enhanced Analytics
 - Predictive modeling and forecasting
 - Machine learning integration for trend analysis
 - Advanced statistical indicators and correlations
 
-### 🌍 Extended Data Sources
+#### 🌍 Extended Data Sources
 - Integration with multiple health organizations
 - Real-time API connections
-- Additional health metrics and demographics
-
+- Additional population characteristics (e.g. popoulation sizes)
 
 ## 🔁 Reproducibility
 #### 1. Clone repo and cd
