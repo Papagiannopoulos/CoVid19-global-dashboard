@@ -1,5 +1,5 @@
 # 🦠 **COVID-19 Globe Dashboard** 
-#### 🎯 ***Aim***: Visualize and analyze daily level COVID-19 information (confirmed/recovered/active cases & deaths) worldwide through interactive web application built with **Streamlit**. <img src="https://streamlit.io/images/brand/streamlit-logo-secondary-colormark-darktext.png" width="25"/>  
+#### 🎯 ***Aim***: Visualize and analyze daily level COVID-19 cases worldwide through interactive web application built with **Streamlit**. <img src="https://streamlit.io/images/brand/streamlit-logo-secondary-colormark-darktext.png" width="50"/>  
 
 ## Project Summary 
 This dashboard provides (real-time) insights into the pandemic's progression overtime from Jan/20 till May/21.
@@ -13,10 +13,10 @@ This dashboard provides (real-time) insights into the pandemic's progression ove
 1. 🔍 **[ Dataset](#-dataset)** - Data source  
 2. 🧹 **[ Data Processing or Methods](#-data-processing)** - Cleaning and feature engineering  
 3. 📊 **[ EDA](#-eda)** - Key insights and patterns  
-4. <img src="https://streamlit.io/images/brand/streamlit-logo-secondary-colormark-darktext.png" width="20"/> **[ Streamlit app](#-streamlit-app)** - Dashboard features  
+4. <img src="https://streamlit.io/images/brand/streamlit-logo-secondary-colormark-darktext.png" width="40"/> **[ Streamlit app](#-streamlit-app)** - Dashboard features  
 5. ▶️ **[ Insights/Results 1](#-insights/Results-1)** - text  
 6. 🔍**[ Findngs Implications/Conclusions](#-findngs-Implications/Conclusions)** - Next steps and improvements  
-7.  **[ Future Enhancements](#-future-enhancements)** - Next steps and improvements  
+7. 🚀 **[ Future Enhancements](#-future-enhancements)** - Next steps and improvements  
 8. 🔁 **[ Reproducibility](#-reproducibility)** - Reproducibility steps  
 
 ## 🔍 Dataset 
@@ -29,18 +29,15 @@ More info about data is available at the following link.
 1) **Data Cleaning**: geographical data aggegations, removed duplicates (<1%), missing values handling  
 2) **Feature Engineering**: Created active cases, daily/comulative cases, date components, metrics (death/recovery rate, overall, date dependent) for visualisations  
 
-## Streamlit app
+## <img src="https://streamlit.io/images/brand/streamlit-logo-secondary-colormark-darktext.png" width="40"/> Streamlit app
 #### 🛠️ Technology Stack
-- **Tool**: Streamlit
 - **Visualizations**: Plotly (interactive charts and maps)
 - **Data Processing**: Pandas, NumPy
 
 #### 📈 Key Metrics Tracked
-- Total Confirmed Cases
+- Total Confirmed/Recovered*/Active Cases
 - Total Deaths
-- Total Recovered Cases ()
-- Active Cases
-- Death Rate & Recovery Rate
+- Death/Recovery Rate
 - Recent 7-day trends
 - Global Rankings
 
@@ -73,7 +70,7 @@ More info about data is available at the following link.
 - Size proportional to case numbers
 - Time-based animation controls
 - Toggle between cumulative and daily cases
-- Color-coded by metric type (confirmed, deaths, recovered, active)
+- Color-coded by metric type
 
 ## 📊 EDA
 
@@ -88,7 +85,7 @@ More info about data is available at the following link.
 - **Policymakers**: Make informed decisions based on current data
 - **General Public**: Stay informed about COVID-19 status in their region
 
-##  Future Enhancements
+## 🚀 Future Enhancements
 
 #### 📈 Enhanced Analytics
 - Predictive modeling and forecasting
