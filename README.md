@@ -13,9 +13,9 @@ This dashboard provides (real-time) insights into the pandemic's progression ove
 1. 🔍 **[ Dataset](#-dataset)** - Data source  
 2. 🧹 **[ Data Processing or Methods](#data-processing)** - Cleaning and feature engineering  
 3. 📊 **[ EDA](#-eda)** - Key insights and patterns  
-4. ⚙️ **[ Streamlit app](#-streamlit-app)** - Dashboard features  
+4. ⚙️ **[ Streamlit app](#%EF%B8%8F-streamlit-app)** - Dashboard features  
 5. ▶️ **[ Insights/Results 1](#%EF%B8%8F-insightsresults-1)** - text  
-6. 🔍**[ Findngs Implications/Conclusions](#-findngs-Implications/Conclusions)** - Next steps and improvements  
+6. 🔍 **[ Findngs Implications/Conclusions](#-findngs-Implications/Conclusions)** - Next steps and improvements  
 7. 🚀 **[ Future Enhancements](#-future-enhancements)** - Next steps and improvements  
 8. 🔁 **[ Reproducibility](#-reproducibility)** - Reproducibility steps  
 
