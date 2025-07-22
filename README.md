@@ -13,7 +13,7 @@ This dashboard provides (real-time) insights into the pandemic's progression ove
 1. 🔍 **[ Dataset](#-dataset)** - Data source  
 2. 🧹 **[ Data Processing or Methods](#data-processing)** - Cleaning and feature engineering  
 3. 📊 **[ EDA](#-eda)** - Key insights and patterns  
-4. <img src="https://streamlit.io/images/brand/streamlit-logo-secondary-colormark-darktext.png" width="60"/> **[ Streamlit app](#-streamlit-app)** - Dashboard features  
+4. ⚙️ **[ Streamlit app](#-streamlit-app)** - Dashboard features  
 5. ▶️ **[ Insights/Results 1](#%EF%B8%8F-insightsresults-1)** - text  
 6. 🔍**[ Findngs Implications/Conclusions](#-findngs-Implications/Conclusions)** - Next steps and improvements  
 7. 🚀 **[ Future Enhancements](#-future-enhancements)** - Next steps and improvements  
@@ -29,7 +29,7 @@ More info about data is available at the following link.
 1) **Data Cleaning**: geographical data aggegations, removed duplicates (<1%), missing values handling  
 2) **Feature Engineering**: Created active cases, daily/comulative cases, date components, metrics (death/recovery rate, overall, date dependent) for visualisations  
 
-## <img src="https://streamlit.io/images/brand/streamlit-logo-secondary-colormark-darktext.png" width="40"/> Streamlit app
+## ⚙️ Streamlit app
 #### 🛠️ Technology Stack
 - **Visualizations**: Plotly (interactive charts and maps)
 - **Data Processing**: Pandas, NumPy
