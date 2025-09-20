@@ -121,4 +121,7 @@ uv sync
 4) Create a new folder named .kaggle  
 5) Move the downloaded kaggle.json file into the .kaggle folder
 
-#### 5. You are ready!!!
+#### 5. You are ready!!!  
+1) Run data_cleaning.ipynb to reproduce input/output  
+2) In your:  
+powershell run streamlitApp.py
