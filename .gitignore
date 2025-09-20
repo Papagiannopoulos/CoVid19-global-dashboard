@@ -10,7 +10,7 @@ wheels/
 .venv
 
 # Text files
-*.csv
+#*.csv
 
 # Compressed files
 *.zip
