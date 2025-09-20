@@ -1,0 +1,1761 @@
+Country/Province,Status,Cases
+Afghanistan,death_rate,4.134871846072656
+Afghanistan,recovery_rate,81.70044643493888
+Afghanistan,death,2899.0
+Afghanistan,active,20311.0
+Afghanistan,recovered,57281.0
+Afghanistan,confirmed,70111.0
+Albania,death_rate,1.851137969870821
+Albania,recovery_rate,97.67039313060765
+Albania,death,2449.0
+Albania,active,35815.0
+Albania,recovered,129215.0
+Albania,confirmed,132297.0
+Algeria,death_rate,2.6935293018621165
+Algeria,recovery_rate,69.61060596624526
+Algeria,death,3460.0
+Algeria,active,35577.0
+Algeria,recovered,89419.0
+Algeria,confirmed,128456.0
+Andorra,death_rate,0.9274811947710508
+Andorra,recovery_rate,97.9770685751844
+Andorra,death,127.0
+Andorra,active,1309.0
+Andorra,recovered,13416.0
+Andorra,confirmed,13693.0
+Angola,death_rate,2.2147454651843184
+Angola,recovery_rate,80.88355763604447
+Angola,death,757.0
+Angola,active,7000.0
+Angola,recovered,27646.0
+Angola,confirmed,34180.0
+Antigua and Barbuda,death_rate,3.3359809372517866
+Antigua and Barbuda,death,42.0
+Antigua and Barbuda,recovery_rate,95.79030976965845
+Antigua and Barbuda,active,448.0
+Antigua and Barbuda,recovered,1206.0
+Antigua and Barbuda,confirmed,1259.0
+Argentina,death_rate,2.0659851677119216
+Argentina,recovery_rate,88.10919809241739
+Argentina,death,77108.0
+Argentina,active,372886.0
+Argentina,recovered,3288467.0
+Argentina,confirmed,3732263.0
+Armenia,death_rate,1.9896205432365033
+Armenia,recovery_rate,95.5952461189369
+Armenia,death,4428.0
+Armenia,active,40976.0
+Armenia,recovered,212752.0
+Armenia,confirmed,222555.0
+Australia:Australian Capital Territory,death_rate,2.4193548387096775
+Australia:Australian Capital Territory,death,3.0
+Australia:Australian Capital Territory,active,76.0
+Australia:Australian Capital Territory,recovery_rate,97.58064516129032
+Australia:Australian Capital Territory,recovered,121.0
+Australia:Australian Capital Territory,confirmed,124.0
+Australia:New South Wales,death_rate,0.9668755595344674
+Australia:New South Wales,recovery_rate,53.661593554162934
+Australia:New South Wales,death,54.0
+Australia:New South Wales,active,2868.0
+Australia:New South Wales,recovered,2997.0
+Australia:New South Wales,confirmed,5585.0
+Australia:Northern Territory,death,0.0
+Australia:Northern Territory,death_rate,0.0
+Australia:Northern Territory,active,53.0
+Australia:Northern Territory,recovery_rate,97.6878612716763
+Australia:Northern Territory,recovered,169.0
+Australia:Northern Territory,confirmed,173.0
+Australia:Queensland,death_rate,0.4326328800988875
+Australia:Queensland,death,7.0
+Australia:Queensland,recovery_rate,98.33127317676144
+Australia:Queensland,active,895.0
+Australia:Queensland,recovered,1591.0
+Australia:Queensland,confirmed,1618.0
+Australia:South Australia,death_rate,0.5319148936170213
+Australia:South Australia,death,4.0
+Australia:South Australia,recovery_rate,99.20212765957447
+Australia:South Australia,active,361.0
+Australia:South Australia,recovered,746.0
+Australia:South Australia,confirmed,752.0
+Australia:Tasmania,death_rate,5.555555555555555
+Australia:Tasmania,death,13.0
+Australia:Tasmania,recovery_rate,94.44444444444444
+Australia:Tasmania,active,122.0
+Australia:Tasmania,recovered,221.0
+Australia:Tasmania,confirmed,234.0
+Australia:Victoria,death_rate,3.9819356091875884
+Australia:Victoria,recovery_rate,95.78497547710387
+Australia:Victoria,death,820.0
+Australia:Victoria,active,8490.0
+Australia:Victoria,recovered,19725.0
+Australia:Victoria,confirmed,20593.0
+Australia:Western Australia,death_rate,0.8849557522123894
+Australia:Western Australia,death,9.0
+Australia:Western Australia,recovery_rate,98.91838741396263
+Australia:Western Australia,active,358.0
+Australia:Western Australia,recovered,1006.0
+Australia:Western Australia,confirmed,1017.0
+Austria,death_rate,1.644192006606572
+Austria,recovery_rate,97.43327843379535
+Austria,death,10592.0
+Austria,active,77130.0
+Austria,recovered,627672.0
+Austria,confirmed,644207.0
+Azerbaijan,death_rate,1.4691825256275415
+Azerbaijan,recovery_rate,96.97174003589804
+Azerbaijan,death,4903.0
+Azerbaijan,active,62427.0
+Azerbaijan,recovered,323617.0
+Azerbaijan,confirmed,333723.0
+Bahamas,death_rate,1.9497658578118349
+Bahamas,recovery_rate,90.60876968922946
+Bahamas,death,229.0
+Bahamas,active,2343.0
+Bahamas,recovered,10642.0
+Bahamas,confirmed,11745.0
+Bahrain,death_rate,0.39839116157116305
+Bahrain,recovery_rate,87.38385561184228
+Bahrain,death,939.0
+Bahrain,active,28797.0
+Bahrain,recovered,205962.0
+Bahrain,confirmed,235698.0
+Bangladesh,death_rate,1.5737672846024384
+Bangladesh,recovery_rate,92.47817242840983
+Bangladesh,death,12549.0
+Bangladesh,active,115779.0
+Bangladesh,recovered,737408.0
+Bangladesh,confirmed,797386.0
+Barbados,death_rate,1.1714855433698903
+Barbados,death,47.0
+Barbados,recovery_rate,97.7567298105683
+Barbados,active,811.0
+Barbados,recovered,3922.0
+Barbados,confirmed,4012.0
+Belarus,death_rate,0.7210369076150769
+Belarus,recovery_rate,97.64434109553802
+Belarus,death,2831.0
+Belarus,active,25477.0
+Belarus,recovered,383380.0
+Belarus,confirmed,392629.0
+Belgium,death_rate,2.351563509954584
+Belgium,recovery_rate,2.9374492221374027
+Belgium,death,24921.0
+Belgium,recovered,31130.0
+Belgium,active,1003712.0
+Belgium,confirmed,1059763.0
+Belize,death_rate,2.5330310374482057
+Belize,recovery_rate,96.77116722695645
+Belize,death,324.0
+Belize,active,4832.0
+Belize,recovered,12378.0
+Belize,confirmed,12791.0
+Benin,death_rate,1.2534127575080665
+Benin,recovery_rate,97.95234549516009
+Benin,death,101.0
+Benin,active,1458.0
+Benin,recovered,7893.0
+Benin,confirmed,8058.0
+Bhutan,death_rate,0.06238303181534623
+Bhutan,death,1.0
+Bhutan,recovery_rate,77.41734248284466
+Bhutan,active,361.0
+Bhutan,recovered,1241.0
+Bhutan,confirmed,1603.0
+Bolivia,death_rate,3.9363100399766577
+Bolivia,recovery_rate,79.44201748501557
+Bolivia,death,14435.0
+Bolivia,active,60954.0
+Bolivia,recovered,291325.0
+Bolivia,confirmed,366714.0
+Bosnia and Herzegovina,death_rate,4.518762356565722
+Bosnia and Herzegovina,recovery_rate,85.4772639190734
+Bosnia and Herzegovina,death,9211.0
+Bosnia and Herzegovina,active,36198.0
+Bosnia and Herzegovina,recovered,174236.0
+Bosnia and Herzegovina,confirmed,203839.0
+Botswana,death_rate,1.5454427107548678
+Botswana,recovery_rate,93.90563686745644
+Botswana,death,831.0
+Botswana,active,5511.0
+Botswana,recovered,50494.0
+Botswana,confirmed,53771.0
+Brazil,death_rate,2.799102697977124
+Brazil,recovery_rate,88.00738240365234
+Brazil,death,461057.0
+Brazil,active,1548092.0
+Brazil,recovered,14496224.0
+Brazil,confirmed,16471600.0
+Brunei,death_rate,1.2448132780082988
+Brunei,death,3.0
+Brunei,recovery_rate,94.6058091286307
+Brunei,active,109.0
+Brunei,recovered,228.0
+Brunei,confirmed,241.0
+Bulgaria,death_rate,4.221930510423914
+Bulgaria,recovery_rate,90.94689171514581
+Bulgaria,death,17657.0
+Bulgaria,active,95442.0
+Bulgaria,recovered,380359.0
+Bulgaria,confirmed,418221.0
+Burkina Faso,death_rate,1.2360387192851823
+Burkina Faso,recovery_rate,98.64482501861505
+Burkina Faso,death,166.0
+Burkina Faso,active,2343.0
+Burkina Faso,recovered,13248.0
+Burkina Faso,confirmed,13430.0
+Burma,death_rate,2.2407090004598467
+Burma,recovery_rate,92.17633042096902
+Burma,death,3216.0
+Burma,active,19859.0
+Burma,recovered,132297.0
+Burma,confirmed,143526.0
+Burundi,death_rate,0.12725344644750797
+Burundi,death,6.0
+Burundi,recovery_rate,16.394485683987277
+Burundi,recovered,773.0
+Burundi,active,3936.0
+Burundi,confirmed,4715.0
+Cabo Verde,death_rate,0.8687609420936148
+Cabo Verde,recovery_rate,93.5487067684075
+Cabo Verde,death,263.0
+Cabo Verde,active,3283.0
+Cabo Verde,recovered,28320.0
+Cabo Verde,confirmed,30273.0
+Cambodia,death_rate,0.7042497831743278
+Cambodia,recovery_rate,73.94622723330441
+Cambodia,death,203.0
+Cambodia,active,12020.0
+Cambodia,recovered,21315.0
+Cambodia,confirmed,28825.0
+Cameroon,death_rate,1.6153758441130637
+Cameroon,recovery_rate,44.67432756021234
+Cameroon,death,1275.0
+Cameroon,recovered,35261.0
+Cameroon,active,42393.0
+Cameroon,confirmed,78929.0
+Canada,recovered,1322602.0
+Canada:Alberta,death_rate,0.9759538030900796
+Canada:Alberta,death,2214.0
+Canada:Alberta,confirmed,226855.0
+Canada:British Columbia,death_rate,1.1784289007598499
+Canada:British Columbia,death,1692.0
+Canada:British Columbia,confirmed,143581.0
+Canada:Diamond Princess,confirmed,1.0
+Canada:Diamond Princess,death,1.0
+Canada:Diamond Princess,death_rate,100.0
+Canada:Grand Princess,death,0.0
+Canada:Grand Princess,death_rate,0.0
+Canada:Grand Princess,confirmed,13.0
+Canada:Manitoba,death_rate,2.0693479078793637
+Canada:Manitoba,death,1045.0
+Canada:Manitoba,confirmed,50499.0
+Canada:New Brunswick,death_rate,1.9625741670470105
+Canada:New Brunswick,death,43.0
+Canada:New Brunswick,confirmed,2191.0
+Canada:Newfoundland and Labrador,death_rate,0.4608294930875576
+Canada:Newfoundland and Labrador,death,6.0
+Canada:Newfoundland and Labrador,confirmed,1302.0
+Canada:Northwest Territories,death,0.0
+Canada:Northwest Territories,death_rate,0.0
+Canada:Northwest Territories,confirmed,127.0
+Canada:Nova Scotia,death_rate,1.5189873417721518
+Canada:Nova Scotia,death,84.0
+Canada:Nova Scotia,confirmed,5530.0
+Canada:Nunavut,death_rate,0.6172839506172839
+Canada:Nunavut,death,4.0
+Canada:Nunavut,confirmed,648.0
+Canada:Ontario,death_rate,1.6193231534540473
+Canada:Ontario,death,8698.0
+Canada:Ontario,confirmed,537138.0
+Canada:Prince Edward Island,death_rate,0.5
+Canada:Prince Edward Island,death,1.0
+Canada:Prince Edward Island,confirmed,200.0
+Canada:Quebec,death_rate,3.008968755409382
+Canada:Quebec,death,11125.0
+Canada:Quebec,confirmed,369728.0
+Canada:Repatriated Travellers,death,0.0
+Canada:Repatriated Travellers,death_rate,0.0
+Canada:Repatriated Travellers,confirmed,13.0
+Canada:Saskatchewan,death_rate,1.15573347107438
+Canada:Saskatchewan,death,537.0
+Canada:Saskatchewan,confirmed,46464.0
+Canada:Yukon,death,2.0
+Canada:Yukon,death_rate,2.380952380952381
+Canada:Yukon,confirmed,84.0
+Central African Republic,death_rate,1.3832039520112915
+Central African Republic,recovery_rate,94.07198306280875
+Central African Republic,death,98.0
+Central African Republic,active,3095.0
+Central African Republic,recovered,6665.0
+Central African Republic,confirmed,7085.0
+Chad,death_rate,3.510551948051948
+Chad,recovery_rate,96.22564935064936
+Chad,death,173.0
+Chad,active,829.0
+Chad,recovered,4742.0
+Chad,confirmed,4928.0
+Chile,death_rate,2.1208428464723563
+Chile,recovery_rate,94.58979539236725
+Chile,death,29047.0
+Chile,active,82961.0
+Chile,recovered,1295499.0
+Chile,confirmed,1369597.0
+China,active,0.0
+China,death,0.0
+China,death_rate,0.0
+China,confirmed,2.0
+China,recovered,18.0
+China,recovery_rate,900.0
+China:Anhui,death_rate,0.5976095617529881
+China:Anhui,death,6.0
+China:Anhui,recovery_rate,99.00398406374502
+China:Anhui,active,758.0
+China:Anhui,recovered,994.0
+China:Anhui,confirmed,1004.0
+China:Beijing,death_rate,0.84985835694051
+China:Beijing,death,9.0
+China:Beijing,recovery_rate,98.7724268177526
+China:Beijing,active,326.0
+China:Beijing,recovered,1046.0
+China:Beijing,confirmed,1059.0
+China:Chongqing,death_rate,1.0033444816053512
+China:Chongqing,death,6.0
+China:Chongqing,recovery_rate,97.9933110367893
+China:Chongqing,active,423.0
+China:Chongqing,recovered,586.0
+China:Chongqing,confirmed,598.0
+China:Fujian,death_rate,0.16129032258064516
+China:Fujian,death,1.0
+China:Fujian,recovery_rate,94.83870967741936
+China:Fujian,active,222.0
+China:Fujian,recovered,588.0
+China:Fujian,confirmed,620.0
+China:Gansu,death_rate,1.0309278350515463
+China:Gansu,death,2.0
+China:Gansu,active,66.0
+China:Gansu,recovery_rate,98.96907216494846
+China:Gansu,recovered,192.0
+China:Gansu,confirmed,194.0
+China:Guangdong,death_rate,0.3289473684210526
+China:Guangdong,death,8.0
+China:Guangdong,recovery_rate,97.90296052631578
+China:Guangdong,active,991.0
+China:Guangdong,recovered,2381.0
+China:Guangdong,confirmed,2432.0
+China:Guangxi,death_rate,0.7272727272727273
+China:Guangxi,death,2.0
+China:Guangxi,recovery_rate,97.45454545454545
+China:Guangxi,active,189.0
+China:Guangxi,recovered,268.0
+China:Guangxi,confirmed,275.0
+China:Guizhou,death_rate,1.3605442176870748
+China:Guizhou,death,2.0
+China:Guizhou,recovery_rate,98.63945578231292
+China:Guizhou,active,114.0
+China:Guizhou,recovered,145.0
+China:Guizhou,confirmed,147.0
+China:Hainan,death_rate,3.1914893617021276
+China:Hainan,death,6.0
+China:Hainan,recovery_rate,96.27659574468085
+China:Hainan,active,126.0
+China:Hainan,recovered,181.0
+China:Hainan,confirmed,188.0
+China:Hebei,death_rate,0.5315110098709187
+China:Hebei,death,7.0
+China:Hebei,recovery_rate,99.46848899012907
+China:Hebei,recovered,1310.0
+China:Hebei,confirmed,1317.0
+China:Heilongjiang,death_rate,0.8064516129032258
+China:Heilongjiang,death,13.0
+China:Heilongjiang,recovery_rate,99.06947890818859
+China:Heilongjiang,active,527.0
+China:Heilongjiang,recovered,1597.0
+China:Heilongjiang,confirmed,1612.0
+China:Henan,death_rate,1.67427701674277
+China:Henan,death,22.0
+China:Henan,recovery_rate,98.17351598173516
+China:Henan,recovered,1290.0
+China:Henan,confirmed,1314.0
+China:Hong Kong,death_rate,1.7740981667652276
+China:Hong Kong,recovery_rate,97.75280898876404
+China:Hong Kong,death,210.0
+China:Hong Kong,active,1517.0
+China:Hong Kong,recovered,11571.0
+China:Hong Kong,confirmed,11837.0
+China:Hubei,death_rate,6.6198154315644295
+China:Hubei,recovery_rate,94.53630481667865
+China:Hubei,death,4512.0
+China:Hubei,active,50633.0
+China:Hubei,recovered,64435.0
+China:Hubei,confirmed,68159.0
+China:Hunan,death_rate,0.3805899143672693
+China:Hunan,death,4.0
+China:Hunan,recovery_rate,98.8582302568982
+China:Hunan,active,670.0
+China:Hunan,recovered,1039.0
+China:Hunan,confirmed,1051.0
+China:Inner Mongolia,death_rate,0.2583979328165375
+China:Inner Mongolia,death,1.0
+China:Inner Mongolia,recovery_rate,98.96640826873386
+China:Inner Mongolia,active,106.0
+China:Inner Mongolia,recovered,383.0
+China:Inner Mongolia,confirmed,387.0
+China:Jiangsu,death,0.0
+China:Jiangsu,death_rate,0.0
+China:Jiangsu,recovery_rate,98.62258953168043
+China:Jiangsu,active,436.0
+China:Jiangsu,recovered,716.0
+China:Jiangsu,confirmed,726.0
+China:Jiangxi,death_rate,0.10672358591248667
+China:Jiangxi,death,1.0
+China:Jiangxi,recovery_rate,99.89327641408752
+China:Jiangxi,active,712.0
+China:Jiangxi,recovered,936.0
+China:Jiangxi,confirmed,937.0
+China:Jilin,death_rate,0.5235602094240838
+China:Jilin,death,3.0
+China:Jilin,recovery_rate,99.47643979057592
+China:Jilin,active,350.0
+China:Jilin,recovered,570.0
+China:Jilin,confirmed,573.0
+China:Liaoning,death_rate,0.4705882352941176
+China:Liaoning,death,2.0
+China:Liaoning,recovery_rate,96.94117647058823
+China:Liaoning,active,97.0
+China:Liaoning,recovered,412.0
+China:Liaoning,confirmed,425.0
+China:Macau,death,0.0
+China:Macau,death_rate,0.0
+China:Macau,active,35.0
+China:Macau,recovered,49.0
+China:Macau,confirmed,51.0
+China:Macau,recovery_rate,96.07843137254902
+China:Ningxia,death,0.0
+China:Ningxia,death_rate,0.0
+China:Ningxia,active,43.0
+China:Ningxia,recovered,75.0
+China:Ningxia,confirmed,76.0
+China:Ningxia,recovery_rate,98.68421052631578
+China:Qinghai,death,0.0
+China:Qinghai,death_rate,0.0
+China:Qinghai,active,15.0
+China:Qinghai,confirmed,18.0
+China:Qinghai,recovered,18.0
+China:Qinghai,recovery_rate,100.0
+China:Shaanxi,death_rate,0.487012987012987
+China:Shaanxi,death,3.0
+China:Shaanxi,recovery_rate,96.1038961038961
+China:Shaanxi,active,187.0
+China:Shaanxi,recovered,592.0
+China:Shaanxi,confirmed,616.0
+China:Shandong,death_rate,0.7927519818799547
+China:Shandong,death,7.0
+China:Shandong,recovery_rate,98.86749716874293
+China:Shandong,active,464.0
+China:Shandong,recovered,873.0
+China:Shandong,confirmed,883.0
+China:Shanghai,death_rate,0.33444816053511706
+China:Shanghai,death,7.0
+China:Shanghai,recovery_rate,96.46440516005732
+China:Shanghai,active,253.0
+China:Shanghai,recovered,2019.0
+China:Shanghai,confirmed,2093.0
+China:Shanxi,death,0.0
+China:Shanxi,death_rate,0.0
+China:Shanxi,active,94.0
+China:Shanxi,recovery_rate,98.02371541501977
+China:Shanxi,recovered,248.0
+China:Shanxi,confirmed,253.0
+China:Sichuan,death_rate,0.2926829268292683
+China:Sichuan,death,3.0
+China:Sichuan,recovery_rate,96.58536585365853
+China:Sichuan,active,350.0
+China:Sichuan,recovered,990.0
+China:Sichuan,confirmed,1025.0
+China:Tianjin,death_rate,0.7633587786259541
+China:Tianjin,death,3.0
+China:Tianjin,recovery_rate,96.69211195928753
+China:Tianjin,active,99.0
+China:Tianjin,recovered,380.0
+China:Tianjin,confirmed,393.0
+China:Tibet,death,0.0
+China:Tibet,death_rate,0.0
+China:Tibet,active,1.0
+China:Tibet,confirmed,1.0
+China:Tibet,recovered,1.0
+China:Tibet,recovery_rate,100.0
+China:Xinjiang,death_rate,0.30612244897959184
+China:Xinjiang,death,3.0
+China:Xinjiang,recovery_rate,99.6938775510204
+China:Xinjiang,active,643.0
+China:Xinjiang,recovered,977.0
+China:Xinjiang,confirmed,980.0
+China:Yunnan,death_rate,0.5681818181818182
+China:Yunnan,death,2.0
+China:Yunnan,recovery_rate,94.0340909090909
+China:Yunnan,active,133.0
+China:Yunnan,recovered,331.0
+China:Yunnan,confirmed,352.0
+China:Zhejiang,death_rate,0.07331378299120235
+China:Zhejiang,death,1.0
+China:Zhejiang,recovery_rate,97.0674486803519
+China:Zhejiang,active,883.0
+China:Zhejiang,recovered,1324.0
+China:Zhejiang,confirmed,1364.0
+Colombia,death_rate,2.609140898722919
+Colombia,recovery_rate,93.41338144030097
+Colombia,death,87747.0
+Colombia,active,169326.0
+Colombia,recovered,3141549.0
+Colombia,confirmed,3363061.0
+Comoros,death_rate,3.761917031692863
+Comoros,recovery_rate,95.82581808812162
+Comoros,death,146.0
+Comoros,active,975.0
+Comoros,recovered,3719.0
+Comoros,confirmed,3881.0
+Congo (Brazzaville),death_rate,1.312403499742666
+Congo (Brazzaville),recovery_rate,70.40658775090067
+Congo (Brazzaville),death,153.0
+Congo (Brazzaville),active,3297.0
+Congo (Brazzaville),recovered,8208.0
+Congo (Brazzaville),confirmed,11658.0
+Congo (Kinshasa),death_rate,2.4891774891774894
+Congo (Kinshasa),recovery_rate,88.06022408963585
+Congo (Kinshasa),death,782.0
+Congo (Kinshasa),active,8533.0
+Congo (Kinshasa),recovered,27665.0
+Congo (Kinshasa),confirmed,31416.0
+Costa Rica,death_rate,1.2613736938956135
+Costa Rica,recovery_rate,77.05108531623486
+Costa Rica,death,3962.0
+Costa Rica,active,71703.0
+Costa Rica,recovered,242019.0
+Costa Rica,confirmed,314102.0
+Cote d'Ivoire,death_rate,0.6415006457349735
+Cote d'Ivoire,recovery_rate,98.7487561662397
+Cote d'Ivoire,death,303.0
+Cote d'Ivoire,active,6170.0
+Cote d'Ivoire,recovered,46642.0
+Cote d'Ivoire,confirmed,47233.0
+Croatia,death_rate,2.248036970965431
+Croatia,recovery_rate,97.03361379949713
+Croatia,death,8002.0
+Croatia,active,25270.0
+Croatia,recovered,345396.0
+Croatia,confirmed,355955.0
+Cuba,death_rate,0.673153111994689
+Cuba,recovery_rate,94.87675515929386
+Cuba,death,943.0
+Cuba,active,6990.0
+Cuba,recovered,132910.0
+Cuba,confirmed,140087.0
+Cyprus,death_rate,0.4974918121139257
+Cyprus,recovery_rate,53.97924353606125
+Cyprus,death,360.0
+Cyprus,recovered,39061.0
+Cyprus,active,47663.0
+Cyprus,confirmed,72363.0
+Czechia,death_rate,1.8122924738174582
+Czechia,recovery_rate,97.38478628001698
+Czechia,death,30101.0
+Czechia,active,208415.0
+Czechia,recovered,1617498.0
+Czechia,confirmed,1660935.0
+Denmark,death_rate,0.9003915056864948
+Denmark,recovery_rate,94.3399872599612
+Denmark,death,2516.0
+Denmark,active,43365.0
+Denmark,recovered,263618.0
+Denmark,confirmed,279434.0
+Denmark:Faroe Islands,death_rate,0.1404494382022472
+Denmark:Faroe Islands,death,1.0
+Denmark:Faroe Islands,recovery_rate,93.96067415730337
+Denmark:Faroe Islands,active,147.0
+Denmark:Faroe Islands,recovered,669.0
+Denmark:Faroe Islands,confirmed,712.0
+Denmark:Greenland,death,0.0
+Denmark:Greenland,death_rate,0.0
+Denmark:Greenland,active,8.0
+Denmark:Greenland,recovered,33.0
+Denmark:Greenland,confirmed,37.0
+Denmark:Greenland,recovery_rate,89.1891891891892
+Djibouti,death_rate,1.327779224160375
+Djibouti,recovery_rate,98.53336804651566
+Djibouti,death,153.0
+Djibouti,active,2390.0
+Djibouti,recovered,11354.0
+Djibouti,confirmed,11523.0
+Dominica,death,0.0
+Dominica,death_rate,0.0
+Dominica,active,28.0
+Dominica,recovery_rate,96.80851063829788
+Dominica,recovered,182.0
+Dominica,confirmed,188.0
+Dominican Republic,death_rate,1.2487694733001522
+Dominican Republic,recovery_rate,82.1991835498372
+Dominican Republic,death,3628.0
+Dominican Republic,active,54304.0
+Dominican Republic,recovered,238810.0
+Dominican Republic,confirmed,290526.0
+Ecuador,death_rate,4.822939155862043
+Ecuador,recovery_rate,86.27022114653401
+Ecuador,death,20485.0
+Ecuador,active,50202.0
+Ecuador,recovered,366425.0
+Ecuador,confirmed,424741.0
+Egypt,death_rate,5.755028600585439
+Egypt,recovery_rate,73.45804288361423
+Egypt,death,15001.0
+Egypt,active,55230.0
+Egypt,recovered,191475.0
+Egypt,confirmed,260659.0
+El Salvador,death_rate,3.0595527400813696
+El Salvador,recovery_rate,93.39486115282746
+El Salvador,death,2241.0
+El Salvador,active,11773.0
+El Salvador,recovered,68408.0
+El Salvador,confirmed,73246.0
+Equatorial Guinea,death_rate,1.3835150662445772
+Equatorial Guinea,recovery_rate,95.50943838668073
+Equatorial Guinea,death,118.0
+Equatorial Guinea,active,2556.0
+Equatorial Guinea,recovered,8146.0
+Equatorial Guinea,confirmed,8529.0
+Eritrea,death_rate,0.3447426742181729
+Eritrea,death,14.0
+Eritrea,recovery_rate,93.86850529426249
+Eritrea,active,810.0
+Eritrea,recovered,3812.0
+Eritrea,confirmed,4061.0
+Estonia,death_rate,0.9658177772283347
+Estonia,recovery_rate,94.97311163308197
+Estonia,death,1250.0
+Estonia,active,28715.0
+Estonia,recovered,122918.0
+Estonia,confirmed,129424.0
+Eswatini,death_rate,3.6150411533702727
+Eswatini,recovery_rate,96.0837054171822
+Eswatini,death,672.0
+Eswatini,active,4912.0
+Eswatini,recovered,17861.0
+Eswatini,confirmed,18589.0
+Ethiopia,death_rate,1.5276548672566372
+Ethiopia,recovery_rate,87.30604719764011
+Ethiopia,death,4143.0
+Ethiopia,active,59781.0
+Ethiopia,recovered,236774.0
+Ethiopia,confirmed,271200.0
+Fiji,death_rate,1.1111111111111112
+Fiji,death,4.0
+Fiji,recovery_rate,44.72222222222222
+Fiji,recovered,161.0
+Fiji,active,195.0
+Fiji,confirmed,360.0
+Finland,death_rate,1.0277091192923118
+Finland,recovery_rate,49.867742075365335
+Finland,death,948.0
+Finland,active,45296.0
+Finland,recovered,46000.0
+Finland,confirmed,92244.0
+France,death_rate,1.8510906616900369
+France,recovery_rate,5.657141278271124
+France,death,108532.0
+France,recovered,331686.0
+France,active,5431304.0
+France,confirmed,5863138.0
+France:French Guiana,death_rate,0.48815385262803523
+France:French Guiana,recovery_rate,42.0611875604932
+France:French Guiana,death,116.0
+France:French Guiana,recovered,9995.0
+France:French Guiana,active,13652.0
+France:French Guiana,confirmed,23763.0
+France:French Polynesia,death_rate,0.752916224814422
+France:French Polynesia,recovery_rate,99.18875927889714
+France:French Polynesia,death,142.0
+France:French Polynesia,active,13775.0
+France:French Polynesia,recovered,18707.0
+France:French Polynesia,confirmed,18860.0
+France:Guadeloupe,death_rate,1.5438638978022643
+France:Guadeloupe,recovery_rate,13.62232851001998
+France:Guadeloupe,death,255.0
+France:Guadeloupe,recovered,2250.0
+France:Guadeloupe,active,14012.0
+France:Guadeloupe,confirmed,16517.0
+France:Martinique,death_rate,0.7888709814233609
+France:Martinique,recovery_rate,0.8312833997794554
+France:Martinique,death,93.0
+France:Martinique,recovered,98.0
+France:Martinique,active,11598.0
+France:Martinique,confirmed,11789.0
+France:Mayotte,death_rate,0.8475416336241078
+France:Mayotte,recovery_rate,14.690721649484537
+France:Mayotte,death,171.0
+France:Mayotte,recovered,2964.0
+France:Mayotte,active,17041.0
+France:Mayotte,confirmed,20176.0
+France:New Caledonia,death,0.0
+France:New Caledonia,death_rate,0.0
+France:New Caledonia,recovery_rate,45.3125
+France:New Caledonia,recovered,58.0
+France:New Caledonia,active,70.0
+France:New Caledonia,confirmed,128.0
+France:Reunion,death_rate,0.7590056624231958
+France:Reunion,recovery_rate,91.54652423597446
+France:Reunion,death,189.0
+France:Reunion,active,2155.0
+France:Reunion,recovered,22796.0
+France:Reunion,confirmed,24901.0
+France:Saint Barthelemy,death_rate,0.09950248756218905
+France:Saint Barthelemy,death,1.0
+France:Saint Barthelemy,recovery_rate,45.97014925373134
+France:Saint Barthelemy,recovered,462.0
+France:Saint Barthelemy,active,542.0
+France:Saint Barthelemy,confirmed,1005.0
+France:Saint Pierre and Miquelon,death,0.0
+France:Saint Pierre and Miquelon,death_rate,0.0
+France:Saint Pierre and Miquelon,active,10.0
+France:Saint Pierre and Miquelon,confirmed,25.0
+France:Saint Pierre and Miquelon,recovered,25.0
+France:Saint Pierre and Miquelon,recovery_rate,100.0
+France:St Martin,death_rate,0.6266318537859008
+France:St Martin,death,12.0
+France:St Martin,recovery_rate,73.05483028720626
+France:St Martin,active,504.0
+France:St Martin,recovered,1399.0
+France:St Martin,confirmed,1915.0
+France:Wallis and Futuna,death_rate,1.5730337078651686
+France:Wallis and Futuna,death,7.0
+France:Wallis and Futuna,recovery_rate,98.42696629213484
+France:Wallis and Futuna,active,394.0
+France:Wallis and Futuna,recovered,438.0
+France:Wallis and Futuna,confirmed,445.0
+Gabon,death_rate,0.615637184485943
+Gabon,recovery_rate,89.43566591422122
+Gabon,death,150.0
+Gabon,active,3371.0
+Gabon,recovered,21791.0
+Gabon,confirmed,24365.0
+Gambia,death_rate,2.971619365609349
+Gambia,recovery_rate,96.2771285475793
+Gambia,death,178.0
+Gambia,active,2108.0
+Gambia,recovered,5767.0
+Gambia,confirmed,5990.0
+Georgia,death_rate,1.3821161922538496
+Georgia,recovery_rate,94.79001399906673
+Georgia,death,4739.0
+Georgia,active,31021.0
+Georgia,recovered,325016.0
+Georgia,confirmed,342880.0
+Germany,death_rate,2.3994808764525035
+Germany,recovery_rate,94.43717106977229
+Germany,death,88413.0
+Germany,active,380989.0
+Germany,recovered,3479700.0
+Germany,confirmed,3684672.0
+Ghana,death_rate,0.8360437216742203
+Ghana,recovery_rate,97.9504132231405
+Ghana,death,784.0
+Ghana,active,8585.0
+Ghana,recovered,91853.0
+Ghana,confirmed,93775.0
+Greece,death_rate,3.003034503427865
+Greece,recovery_rate,23.41787484858702
+Greece,death,12024.0
+Greece,recovered,93764.0
+Greece,active,294607.0
+Greece,confirmed,400395.0
+Grenada,death_rate,0.6211180124223602
+Grenada,death,1.0
+Grenada,active,56.0
+Grenada,recovery_rate,99.37888198757764
+Grenada,recovered,160.0
+Grenada,confirmed,161.0
+Guatemala,death_rate,3.199297186777341
+Guatemala,recovery_rate,91.53866457608622
+Guatemala,death,8121.0
+Guatemala,active,27377.0
+Guatemala,recovered,232359.0
+Guatemala,confirmed,253837.0
+Guinea,death_rate,0.6948040738822717
+Guinea,recovery_rate,90.50146728810633
+Guinea,death,161.0
+Guinea,active,3318.0
+Guinea,recovered,20971.0
+Guinea,confirmed,23172.0
+Guinea-Bissau,death_rate,1.808029779314012
+Guinea-Bissau,death,68.0
+Guinea-Bissau,recovery_rate,93.48577505982452
+Guinea-Bissau,active,1401.0
+Guinea-Bissau,recovered,3516.0
+Guinea-Bissau,confirmed,3761.0
+Guyana,death_rate,2.2708358102484842
+Guyana,recovery_rate,86.00642016407086
+Guyana,death,382.0
+Guyana,active,2055.0
+Guyana,recovered,14468.0
+Guyana,confirmed,16822.0
+Haiti,death_rate,2.137599093997735
+Haiti,recovery_rate,88.67497168742922
+Haiti,death,302.0
+Haiti,active,4965.0
+Haiti,recovered,12528.0
+Haiti,confirmed,14128.0
+Holy See,death,0.0
+Holy See,death_rate,0.0
+Holy See,active,14.0
+Holy See,confirmed,27.0
+Holy See,recovered,27.0
+Holy See,recovery_rate,100.0
+Honduras,death_rate,2.6570782268138697
+Honduras,recovery_rate,35.614386035990414
+Honduras,death,6296.0
+Honduras,recovered,84389.0
+Honduras,active,146267.0
+Honduras,confirmed,236952.0
+Hungary,death_rate,3.6950021889676035
+Hungary,recovery_rate,86.0970707633527
+Hungary,death,29709.0
+Hungary,active,272974.0
+Hungary,recovered,692248.0
+Hungary,confirmed,804032.0
+Iceland,death_rate,0.4424103737604882
+Iceland,death,29.0
+Iceland,recovery_rate,98.79481311975591
+Iceland,active,1252.0
+Iceland,recovered,6476.0
+Iceland,confirmed,6555.0
+India,death_rate,1.1685762220915725
+India,recovery_rate,91.25112924272625
+India,death,325972.0
+India,active,3745237.0
+India,recovered,25454320.0
+India,confirmed,27894800.0
+Indonesia,death_rate,2.777019612956552
+Indonesia,recovery_rate,91.71502039309894
+Indonesia,death,50262.0
+Indonesia,active,176672.0
+Indonesia,recovered,1659974.0
+Indonesia,confirmed,1809926.0
+Iran,death_rate,2.756135209998002
+Iran,recovery_rate,83.81784573440369
+Iran,death,79741.0
+Iran,active,479932.0
+Iran,recovered,2425033.0
+Iran,confirmed,2893218.0
+Iraq,death_rate,1.3684559754961427
+Iraq,recovery_rate,92.75247820054825
+Iraq,death,16334.0
+Iraq,active,112140.0
+Iraq,recovered,1107101.0
+Iraq,confirmed,1193608.0
+Ireland,death_rate,1.938635382744144
+Ireland,recovery_rate,9.167026327147173
+Ireland,death,4941.0
+Ireland,recovered,23364.0
+Ireland,active,226565.0
+Ireland,confirmed,254870.0
+Israel,death_rate,0.7632351066706534
+Israel,recovery_rate,99.17636842086453
+Israel,death,6407.0
+Israel,active,85014.0
+Israel,recovered,832539.0
+Israel,confirmed,839453.0
+Italy,death_rate,2.9907513668822268
+Italy,recovery_rate,91.26600530968621
+Italy,death,126002.0
+Italy,active,805947.0
+Italy,recovered,3845087.0
+Italy,confirmed,4213055.0
+Jamaica,death_rate,1.9473270765287136
+Jamaica,recovery_rate,51.403646587009554
+Jamaica,death,942.0
+Jamaica,active,23845.0
+Jamaica,recovered,24866.0
+Jamaica,confirmed,48374.0
+Japan,death_rate,1.7341850057707406
+Japan,recovery_rate,89.79811161433945
+Japan,death,12877.0
+Japan,active,83832.0
+Japan,recovered,666786.0
+Japan,confirmed,742539.0
+Jordan,death_rate,1.2844054180238724
+Jordan,recovery_rate,97.1746075390079
+Jordan,death,9436.0
+Jordan,active,137385.0
+Jordan,recovered,713902.0
+Jordan,confirmed,734659.0
+Kazakhstan,death_rate,0.7845640108042806
+Kazakhstan,recovery_rate,91.69324048642056
+Kazakhstan,death,3442.0
+Kazakhstan,active,46234.0
+Kazakhstan,recovered,402272.0
+Kazakhstan,confirmed,438715.0
+Kenya,death_rate,1.8423908261723905
+Kenya,recovery_rate,68.11918937149896
+Kenya,death,3141.0
+Kenya,active,51211.0
+Kenya,recovered,116133.0
+Kenya,confirmed,170485.0
+Kiribati,death,0.0
+Kiribati,recovered,0.0
+Kiribati,recovery_rate,0.0
+Kiribati,death_rate,0.0
+Kiribati,active,2.0
+Kiribati,confirmed,2.0
+"Korea, South",death_rate,1.3987563433635908
+"Korea, South",recovery_rate,93.18919305267673
+"Korea, South",death,1957.0
+"Korea, South",active,18073.0
+"Korea, South",recovered,130381.0
+"Korea, South",confirmed,139910.0
+Kosovo,death_rate,2.101060348213117
+Kosovo,recovery_rate,95.65855665476035
+Kosovo,death,2247.0
+Kosovo,active,13688.0
+Kosovo,recovered,102303.0
+Kosovo,confirmed,106946.0
+Kuwait,death_rate,0.5751229961169416
+Kuwait,recovery_rate,95.04559577721483
+Kuwait,death,1764.0
+Kuwait,active,15831.0
+Kuwait,recovered,291521.0
+Kuwait,confirmed,306717.0
+Kyrgyzstan,death_rate,1.7242041027806028
+Kyrgyzstan,recovery_rate,94.03005123678302
+Kyrgyzstan,death,1797.0
+Kyrgyzstan,active,13002.0
+Kyrgyzstan,recovered,98000.0
+Kyrgyzstan,confirmed,104222.0
+Laos,death_rate,0.15723270440251574
+Laos,death,3.0
+Laos,recovery_rate,73.48008385744235
+Laos,active,1088.0
+Laos,recovered,1402.0
+Laos,confirmed,1908.0
+Latvia,death_rate,1.7830542138762246
+Latvia,recovery_rate,94.29874057689703
+Latvia,death,2370.0
+Latvia,active,22856.0
+Latvia,recovered,125340.0
+Latvia,confirmed,132918.0
+Lebanon,death_rate,1.4289099701554435
+Lebanon,recovery_rate,95.8763783667696
+Lebanon,death,7718.0
+Lebanon,active,119050.0
+Lebanon,recovered,517859.0
+Lebanon,confirmed,540132.0
+Lesotho,death_rate,3.0115473441108547
+Lesotho,recovery_rate,59.4364896073903
+Lesotho,death,326.0
+Lesotho,recovered,6434.0
+Lesotho,active,7101.0
+Lesotho,confirmed,10825.0
+Liberia,death_rate,3.9467645709040844
+Liberia,death,86.0
+Liberia,recovery_rate,93.29967875172098
+Liberia,active,558.0
+Liberia,recovered,2033.0
+Liberia,confirmed,2179.0
+Libya,death_rate,1.6860103346589834
+Libya,recovery_rate,92.67591916240565
+Libya,death,3116.0
+Libya,active,28894.0
+Libya,recovered,171279.0
+Libya,confirmed,184815.0
+Liechtenstein,death_rate,1.928191489361702
+Liechtenstein,death,58.0
+Liechtenstein,recovery_rate,97.37367021276596
+Liechtenstein,active,396.0
+Liechtenstein,recovered,2929.0
+Liechtenstein,confirmed,3008.0
+Lithuania,death_rate,1.550028115939912
+Lithuania,recovery_rate,92.86366325137111
+Lithuania,death,4245.0
+Lithuania,active,48776.0
+Lithuania,recovered,254322.0
+Lithuania,confirmed,273866.0
+Luxembourg,death_rate,1.1656880996706287
+Luxembourg,recovery_rate,97.36932550479736
+Luxembourg,death,814.0
+Luxembourg,active,10284.0
+Luxembourg,recovered,67993.0
+Luxembourg,confirmed,69830.0
+Madagascar,death_rate,2.0104767909977204
+Madagascar,recovery_rate,97.43415627879905
+Madagascar,death,829.0
+Madagascar,active,6718.0
+Madagascar,recovered,40176.0
+Madagascar,confirmed,41234.0
+Malawi,death_rate,3.3615893268082377
+Malawi,recovery_rate,94.9721809548778
+Malawi,death,1154.0
+Malawi,active,14874.0
+Malawi,recovered,32603.0
+Malawi,confirmed,34329.0
+Malaysia,death_rate,0.4744563446450888
+Malaysia,recovery_rate,85.87946302284195
+Malaysia,death,2650.0
+Malaysia,active,76218.0
+Malaysia,recovered,479666.0
+Malaysia,confirmed,558534.0
+Maldives,death_rate,0.24957873652751722
+Maldives,recovery_rate,60.777986201634185
+Maldives,death,157.0
+Maldives,active,25427.0
+Maldives,recovered,38233.0
+Maldives,confirmed,62906.0
+Mali,death_rate,3.6242551699964953
+Mali,recovery_rate,67.92849631966351
+Mali,death,517.0
+Mali,active,5240.0
+Mali,recovered,9690.0
+Mali,confirmed,14265.0
+Malta,death_rate,1.3724655245831834
+Malta,recovery_rate,98.40807101444528
+Malta,death,419.0
+Malta,active,3403.0
+Malta,recovered,30043.0
+Malta,confirmed,30529.0
+Marshall Islands,death,0.0
+Marshall Islands,death_rate,0.0
+Marshall Islands,active,3.0
+Marshall Islands,confirmed,4.0
+Marshall Islands,recovered,4.0
+Marshall Islands,recovery_rate,100.0
+Mauritania,death_rate,2.378872732877768
+Mauritania,recovery_rate,94.69763140317525
+Mauritania,death,463.0
+Mauritania,active,3460.0
+Mauritania,recovered,18431.0
+Mauritania,confirmed,19463.0
+Mauritius,death_rate,1.247248716067498
+Mauritius,death,17.0
+Mauritius,recovery_rate,86.7938371239912
+Mauritius,active,448.0
+Mauritius,recovered,1183.0
+Mauritius,confirmed,1363.0
+Mexico,death_rate,9.266212814166103
+Mexico,recovery_rate,79.82013706804429
+Mexico,death,223455.0
+Mexico,active,300329.0
+Mexico,recovered,1924865.0
+Mexico,confirmed,2411503.0
+Micronesia,death,0.0
+Micronesia,death_rate,0.0
+Micronesia,active,1.0
+Micronesia,confirmed,1.0
+Micronesia,recovered,1.0
+Micronesia,recovery_rate,100.0
+Moldova,death_rate,2.391172262401756
+Moldova,recovery_rate,96.9596832676741
+Moldova,death,6100.0
+Moldova,active,22962.0
+Moldova,recovered,247349.0
+Moldova,confirmed,255105.0
+Monaco,death_rate,1.278465840990811
+Monaco,death,32.0
+Monaco,recovery_rate,98.4019176987615
+Monaco,active,266.0
+Monaco,recovered,2463.0
+Monaco,confirmed,2503.0
+Mongolia,death_rate,0.47332261881634025
+Mongolia,recovery_rate,87.1054908956041
+Mongolia,death,268.0
+Mongolia,active,16489.0
+Mongolia,recovered,49320.0
+Mongolia,confirmed,56621.0
+Montenegro,death_rate,1.5899001667235804
+Montenegro,recovery_rate,97.51320731976779
+Montenegro,death,1583.0
+Montenegro,active,11177.0
+Montenegro,recovered,97090.0
+Montenegro,confirmed,99566.0
+Morocco,death_rate,1.7611415620157729
+Morocco,recovery_rate,97.66260397634852
+Morocco,death,9138.0
+Morocco,active,49800.0
+Morocco,recovered,506740.0
+Morocco,confirmed,518868.0
+Mozambique,death_rate,1.1820598382444432
+Mozambique,recovery_rate,98.2679147107064
+Mozambique,death,836.0
+Mozambique,recovered,69499.0
+Mozambique,confirmed,70724.0
+Namibia,death_rate,1.4965513456155437
+Namibia,recovery_rate,91.91715911377814
+Namibia,death,818.0
+Namibia,active,4913.0
+Namibia,recovered,50241.0
+Namibia,confirmed,54659.0
+Nepal,death_rate,1.2943106706997554
+Nepal,recovery_rate,78.55668910885363
+Nepal,death,7163.0
+Nepal,active,117261.0
+Nepal,recovered,434750.0
+Nepal,confirmed,553422.0
+Netherlands,recovered,0.0
+Netherlands,recovery_rate,0.0
+Netherlands,death_rate,1.071016641950898
+Netherlands,death,17615.0
+Netherlands,active,1627084.0
+Netherlands,confirmed,1644699.0
+Netherlands:Aruba,death_rate,0.975031893566612
+Netherlands:Aruba,recovery_rate,98.4417714598141
+Netherlands:Aruba,death,107.0
+Netherlands:Aruba,active,1630.0
+Netherlands:Aruba,recovered,10803.0
+Netherlands:Aruba,confirmed,10974.0
+"Netherlands:Bonaire, Sint Eustatius and Saba",death_rate,1.054590570719603
+"Netherlands:Bonaire, Sint Eustatius and Saba",death,17.0
+"Netherlands:Bonaire, Sint Eustatius and Saba",active,88.0
+"Netherlands:Bonaire, Sint Eustatius and Saba",recovery_rate,97.95285359801488
+"Netherlands:Bonaire, Sint Eustatius and Saba",recovered,1579.0
+"Netherlands:Bonaire, Sint Eustatius and Saba",confirmed,1612.0
+Netherlands:Curacao,death_rate,0.9942140004889577
+Netherlands:Curacao,recovery_rate,98.77760573710374
+Netherlands:Curacao,death,122.0
+Netherlands:Curacao,active,4768.0
+Netherlands:Curacao,recovered,12121.0
+Netherlands:Curacao,confirmed,12271.0
+Netherlands:Sint Maarten,death_rate,1.1613438407299876
+Netherlands:Sint Maarten,death,28.0
+Netherlands:Sint Maarten,recovery_rate,95.6864371630029
+Netherlands:Sint Maarten,active,264.0
+Netherlands:Sint Maarten,recovered,2307.0
+Netherlands:Sint Maarten,confirmed,2411.0
+New Zealand,death_rate,0.9730538922155689
+New Zealand,death,26.0
+New Zealand,recovery_rate,98.42814371257485
+New Zealand,active,929.0
+New Zealand,recovered,2630.0
+New Zealand,confirmed,2672.0
+Nicaragua,death_rate,2.539595849262698
+Nicaragua,recovery_rate,57.68705625341344
+Nicaragua,death,186.0
+Nicaragua,active,2913.0
+Nicaragua,recovered,4225.0
+Nicaragua,confirmed,7324.0
+Niger,death_rate,3.54898336414048
+Niger,recovery_rate,93.95563770794824
+Niger,death,192.0
+Niger,active,1469.0
+Niger,recovered,5083.0
+Niger,confirmed,5410.0
+Nigeria,death_rate,1.2454520852752804
+Nigeria,recovery_rate,94.14980304898218
+Nigeria,death,2071.0
+Nigeria,active,25267.0
+Nigeria,recovered,156557.0
+Nigeria,confirmed,166285.0
+North Macedonia,death_rate,3.4770622109426332
+North Macedonia,recovery_rate,94.99310771292015
+North Macedonia,death,5398.0
+North Macedonia,active,22538.0
+North Macedonia,recovered,147473.0
+North Macedonia,confirmed,155246.0
+Norway,death_rate,0.6281336488708836
+Norway,recovery_rate,14.438249568809916
+Norway,death,783.0
+Norway,recovered,17998.0
+Norway,active,105874.0
+Norway,confirmed,124655.0
+Oman,death_rate,1.0772555476555776
+Oman,recovery_rate,92.1865060060622
+Oman,death,2303.0
+Oman,active,23276.0
+Oman,recovered,197080.0
+Oman,confirmed,213784.0
+Pakistan,death_rate,2.2565227611063228
+Pakistan,recovery_rate,91.33628457259265
+Pakistan,death,20736.0
+Pakistan,active,108642.0
+Pakistan,recovered,839322.0
+Pakistan,confirmed,918936.0
+Panama,death_rate,1.687474167258391
+Panama,recovery_rate,96.64969212671026
+Panama,death,6369.0
+Panama,active,56897.0
+Panama,recovered,364783.0
+Panama,confirmed,377428.0
+Papua New Guinea,death_rate,1.0271366979457266
+Papua New Guinea,recovery_rate,94.19857976160284
+Papua New Guinea,death,162.0
+Papua New Guinea,active,9015.0
+Papua New Guinea,recovered,14857.0
+Papua New Guinea,confirmed,15772.0
+Paraguay,death_rate,2.5632249802488785
+Paraguay,recovery_rate,82.20801852755032
+Paraguay,death,8987.0
+Paraguay,active,53394.0
+Paraguay,recovered,288232.0
+Paraguay,confirmed,350613.0
+Peru,death_rate,3.541774173258265
+Peru,recovery_rate,97.43098397734596
+Peru,death,68978.0
+Peru,active,168092.0
+Peru,recovered,1897522.0
+Peru,confirmed,1947555.0
+Philippines,death_rate,1.7032966129697795
+Philippines,recovery_rate,93.88976657553704
+Philippines,death,20722.0
+Philippines,active,203710.0
+Philippines,recovered,1142246.0
+Philippines,confirmed,1216582.0
+Poland,death_rate,2.566091250486266
+Poland,recovery_rate,91.82634358290865
+Poland,death,73682.0
+Poland,active,440035.0
+Poland,recovered,2636675.0
+Poland,confirmed,2871371.0
+Portugal,death_rate,2.006925147339171
+Portugal,recovery_rate,95.32475922910872
+Portugal,death,17023.0
+Portugal,active,181811.0
+Portugal,recovered,808557.0
+Portugal,confirmed,848213.0
+Qatar,death_rate,0.25525131196409895
+Qatar,recovery_rate,98.00728894540663
+Qatar,death,554.0
+Qatar,active,35634.0
+Qatar,recovered,212716.0
+Qatar,confirmed,217041.0
+Romania,death_rate,2.807338972699749
+Romania,recovery_rate,96.39074980555509
+Romania,death,30247.0
+Romania,active,120307.0
+Romania,recovered,1038539.0
+Romania,confirmed,1077426.0
+Russia,death_rate,2.3777061994193707
+Russia,recovery_rate,92.40952011294709
+Russia,death,118781.0
+Russia,active,558147.0
+Russia,recovered,4616422.0
+Russia,confirmed,4995613.0
+Rwanda,death_rate,1.3089394615499033
+Rwanda,recovery_rate,95.20303435966086
+Rwanda,death,352.0
+Rwanda,active,5121.0
+Rwanda,recovered,25602.0
+Rwanda,confirmed,26892.0
+Saint Kitts and Nevis,death,0.0
+Saint Kitts and Nevis,death_rate,0.0
+Saint Kitts and Nevis,active,23.0
+Saint Kitts and Nevis,recovered,45.0
+Saint Kitts and Nevis,recovery_rate,66.17647058823529
+Saint Kitts and Nevis,confirmed,68.0
+Saint Lucia,death_rate,1.529294935451837
+Saint Lucia,death,77.0
+Saint Lucia,recovery_rate,94.77656405163853
+Saint Lucia,active,1125.0
+Saint Lucia,recovered,4772.0
+Saint Lucia,confirmed,5035.0
+Saint Vincent and the Grenadines,death_rate,0.5920078934385792
+Saint Vincent and the Grenadines,death,12.0
+Saint Vincent and the Grenadines,recovery_rate,90.3305377405032
+Saint Vincent and the Grenadines,active,897.0
+Saint Vincent and the Grenadines,recovered,1831.0
+Saint Vincent and the Grenadines,confirmed,2027.0
+Samoa,death,0.0
+Samoa,death_rate,0.0
+Samoa,active,2.0
+Samoa,confirmed,3.0
+Samoa,recovered,3.0
+Samoa,recovery_rate,100.0
+San Marino,death_rate,1.768520337983887
+San Marino,death,90.0
+San Marino,recovery_rate,98.15287875810571
+San Marino,active,521.0
+San Marino,recovered,4995.0
+San Marino,confirmed,5089.0
+Sao Tome and Principe,death_rate,1.5778251599147122
+Sao Tome and Principe,death,37.0
+Sao Tome and Principe,recovery_rate,97.69722814498934
+Sao Tome and Principe,active,487.0
+Sao Tome and Principe,recovered,2291.0
+Sao Tome and Principe,confirmed,2345.0
+Saudi Arabia,death_rate,1.6360164538551454
+Saudi Arabia,recovery_rate,96.13035486432709
+Saudi Arabia,death,7334.0
+Saudi Arabia,active,63026.0
+Saudi Arabia,recovered,430937.0
+Saudi Arabia,confirmed,448284.0
+Senegal,death_rate,2.753381239263507
+Senegal,recovery_rate,96.71191115627495
+Senegal,death,1138.0
+Senegal,active,5031.0
+Senegal,recovered,39972.0
+Senegal,confirmed,41331.0
+Serbia,death_rate,0.9611738567452103
+Serbia,recovery_rate,2.185813837870025
+Serbia,death,6844.0
+Serbia,recovered,15564.0
+Serbia,active,689638.0
+Serbia,confirmed,712046.0
+Seychelles,death_rate,0.3589053387169134
+Seychelles,death,40.0
+Seychelles,recovery_rate,89.15208613728129
+Seychelles,active,2739.0
+Seychelles,recovered,9936.0
+Seychelles,confirmed,11145.0
+Sierra Leone,death_rate,1.9077517507848345
+Sierra Leone,recovery_rate,75.60975609756098
+Sierra Leone,death,79.0
+Sierra Leone,active,1265.0
+Sierra Leone,recovered,3131.0
+Sierra Leone,confirmed,4141.0
+Singapore,death_rate,0.05161040594809928
+Singapore,death,32.0
+Singapore,recovery_rate,99.0645613921907
+Singapore,active,20799.0
+Singapore,recovered,61423.0
+Singapore,confirmed,62003.0
+Slovakia,death_rate,3.166854971240756
+Slovakia,recovery_rate,65.55566967953985
+Slovakia,death,12333.0
+Slovakia,active,121807.0
+Slovakia,recovered,255300.0
+Slovakia,confirmed,389440.0
+Slovenia,death_rate,1.7247024572670646
+Slovenia,recovery_rate,96.50996279976172
+Slovenia,death,4372.0
+Slovenia,active,24419.0
+Slovenia,recovered,244646.0
+Slovenia,confirmed,253493.0
+Solomon Islands,death,0.0
+Solomon Islands,death_rate,0.0
+Solomon Islands,active,12.0
+Solomon Islands,confirmed,20.0
+Solomon Islands,recovered,20.0
+Solomon Islands,recovery_rate,100.0
+Somalia,death_rate,5.241247526103869
+Somalia,recovery_rate,45.901863099706546
+Somalia,death,768.0
+Somalia,recovered,6726.0
+Somalia,active,7477.0
+Somalia,confirmed,14653.0
+South Africa,death_rate,3.3972647326514256
+South Africa,recovery_rate,93.67802443537644
+South Africa,death,56363.0
+South Africa,active,239799.0
+South Africa,recovered,1554184.0
+South Africa,confirmed,1659070.0
+South Sudan,death_rate,1.0759730538922156
+South Sudan,recovery_rate,98.37200598802394
+South Sudan,death,115.0
+South Sudan,active,4347.0
+South Sudan,recovered,10514.0
+South Sudan,confirmed,10688.0
+Spain,death_rate,2.1780443966158742
+Spain,recovery_rate,4.098937540648379
+Spain,death,79905.0
+Spain,recovered,150376.0
+Spain,active,3438377.0
+Spain,confirmed,3668658.0
+Sri Lanka,death_rate,0.7547357871013827
+Sri Lanka,recovery_rate,82.16874408199654
+Sri Lanka,death,1363.0
+Sri Lanka,active,34384.0
+Sri Lanka,recovered,148391.0
+Sri Lanka,confirmed,180593.0
+Sudan,death_rate,7.367734988239961
+Sudan,recovery_rate,79.20031737935334
+Sudan,death,2600.0
+Sudan,active,12776.0
+Sudan,recovered,27949.0
+Sudan,confirmed,35289.0
+Suriname,death_rate,1.98415432311402
+Suriname,recovery_rate,78.94591801584568
+Suriname,death,288.0
+Suriname,active,2768.0
+Suriname,recovered,11459.0
+Suriname,confirmed,14515.0
+Sweden,recovered,0.0
+Sweden,recovery_rate,0.0
+Sweden,death_rate,1.3524908912064226
+Sweden,death,14451.0
+Sweden,active,1054022.0
+Sweden,confirmed,1068473.0
+Switzerland,death_rate,1.5591113137659212
+Switzerland,recovery_rate,45.82820483591454
+Switzerland,death,10805.0
+Switzerland,recovered,317600.0
+Switzerland,active,364622.0
+Switzerland,confirmed,693023.0
+Syria,death_rate,7.213584288052373
+Syria,recovery_rate,88.35106382978724
+Syria,death,1763.0
+Syria,recovered,21593.0
+Syria,confirmed,24440.0
+Taiwan*,death_rate,1.2682551883166795
+Taiwan*,recovery_rate,14.514476044068664
+Taiwan*,death,99.0
+Taiwan*,recovered,1133.0
+Taiwan*,active,6574.0
+Taiwan*,confirmed,7806.0
+Tajikistan,death_rate,0.6762849413886384
+Tajikistan,death,90.0
+Tajikistan,recovery_rate,99.32371505861136
+Tajikistan,active,1895.0
+Tajikistan,recovered,13218.0
+Tajikistan,confirmed,13308.0
+Tanzania,death_rate,4.12573673870334
+Tanzania,death,21.0
+Tanzania,recovery_rate,35.952848722986246
+Tanzania,recovered,183.0
+Tanzania,active,305.0
+Tanzania,confirmed,509.0
+Thailand,death_rate,0.6506763609541497
+Thailand,recovery_rate,17.69800187036525
+Thailand,death,988.0
+Thailand,recovered,26873.0
+Thailand,active,123981.0
+Thailand,confirmed,151842.0
+Timor-Leste,death_rate,0.23696682464454977
+Timor-Leste,death,16.0
+Timor-Leste,recovery_rate,57.98281990521327
+Timor-Leste,recovered,3915.0
+Timor-Leste,confirmed,6752.0
+Togo,death_rate,0.9306134603930911
+Togo,recovery_rate,94.13341274568195
+Togo,death,125.0
+Togo,active,2829.0
+Togo,recovered,12644.0
+Togo,confirmed,13432.0
+Trinidad and Tobago,death_rate,2.043389417851398
+Trinidad and Tobago,recovery_rate,57.74096778400939
+Trinidad and Tobago,death,470.0
+Trinidad and Tobago,active,9250.0
+Trinidad and Tobago,recovered,13281.0
+Trinidad and Tobago,confirmed,23001.0
+Tunisia,death_rate,3.6618963579071218
+Tunisia,recovery_rate,87.739025086349
+Tunisia,death,12574.0
+Tunisia,active,57819.0
+Tunisia,recovered,301273.0
+Tunisia,confirmed,343374.0
+Turkey,death_rate,0.9028112799557217
+Turkey,recovery_rate,97.29374340381109
+Turkey,death,47271.0
+Turkey,active,1306587.0
+Turkey,recovered,5094279.0
+Turkey,confirmed,5235978.0
+US,recovered,6298082.0
+US:Alabama,death_rate,2.051140493738556
+US:Alabama,death,11146.0
+US:Alabama,confirmed,543405.0
+US:Alaska,death_rate,0.525581130355515
+US:Alaska,death,369.0
+US:Alaska,confirmed,70208.0
+US:American Samoa,confirmed,0.0
+US:American Samoa,death,0.0
+US:Arizona,death_rate,2.0021216037870855
+US:Arizona,death,17628.0
+US:Arizona,confirmed,880466.0
+US:Arkansas,death_rate,1.7082246769609424
+US:Arkansas,death,5830.0
+US:Arkansas,confirmed,341290.0
+US:California,death_rate,1.6690628189572554
+US:California,death,63236.0
+US:California,confirmed,3788713.0
+US:Colorado,death_rate,1.2123782044782034
+US:Colorado,death,6576.0
+US:Colorado,confirmed,542405.0
+US:Connecticut,death_rate,2.3717326776856176
+US:Connecticut,death,8238.0
+US:Connecticut,confirmed,347341.0
+US:Delaware,death_rate,1.527075480371426
+US:Delaware,death,1661.0
+US:Delaware,confirmed,108770.0
+US:Diamond Princess,death,0.0
+US:Diamond Princess,death_rate,0.0
+US:Diamond Princess,confirmed,49.0
+US:District of Columbia,death_rate,2.315023109329625
+US:District of Columbia,death,1132.0
+US:District of Columbia,confirmed,48898.0
+US:Florida,death_rate,1.5845275243470192
+US:Florida,death,36774.0
+US:Florida,confirmed,2320818.0
+US:Georgia,death_rate,1.8549098538914648
+US:Georgia,death,20837.0
+US:Georgia,confirmed,1123343.0
+US:Grand Princess,death_rate,2.912621359223301
+US:Grand Princess,death,3.0
+US:Grand Princess,confirmed,103.0
+US:Guam,death_rate,1.716527709661599
+US:Guam,death,140.0
+US:Guam,confirmed,8156.0
+US:Hawaii,death_rate,1.3813531170413023
+US:Hawaii,death,499.0
+US:Hawaii,confirmed,36124.0
+US:Idaho,death_rate,1.0884736370643502
+US:Idaho,death,2090.0
+US:Idaho,confirmed,192012.0
+US:Illinois,death_rate,1.8223317098462106
+US:Illinois,death,25166.0
+US:Illinois,confirmed,1380978.0
+US:Indiana,death_rate,1.831602850923806
+US:Indiana,death,13615.0
+US:Indiana,confirmed,743338.0
+US:Iowa,death_rate,1.6306206591962427
+US:Iowa,death,6055.0
+US:Iowa,confirmed,371331.0
+US:Kansas,death_rate,1.610054197018371
+US:Kansas,death,5077.0
+US:Kansas,confirmed,315331.0
+US:Kentucky,death_rate,1.4798974414925536
+US:Kentucky,death,6782.0
+US:Kentucky,confirmed,458275.0
+US:Louisiana,death_rate,2.246937973379224
+US:Louisiana,death,10576.0
+US:Louisiana,confirmed,470685.0
+US:Maine,death_rate,1.2193679978716485
+US:Maine,death,825.0
+US:Maine,confirmed,67658.0
+US:Maryland,death_rate,2.088882505527411
+US:Maryland,death,9599.0
+US:Maryland,confirmed,459528.0
+US:Massachusetts,death_rate,2.528074387754091
+US:Massachusetts,death,17868.0
+US:Massachusetts,confirmed,706783.0
+US:Michigan,death_rate,2.0541544305558497
+US:Michigan,death,20376.0
+US:Michigan,confirmed,991941.0
+US:Minnesota,death_rate,1.2495321116942963
+US:Minnesota,death,7511.0
+US:Minnesota,confirmed,601105.0
+US:Mississippi,death_rate,2.3030367950297252
+US:Mississippi,death,7310.0
+US:Mississippi,confirmed,317407.0
+US:Missouri,death_rate,1.5668027884337747
+US:Missouri,death,9496.0
+US:Missouri,confirmed,606075.0
+US:Montana,death_rate,1.4429485172429217
+US:Montana,death,1613.0
+US:Montana,confirmed,111785.0
+US:Nebraska,death_rate,1.0237165478450903
+US:Nebraska,death,2286.0
+US:Nebraska,confirmed,223304.0
+US:Nevada,death_rate,1.7254160643463432
+US:Nevada,death,5586.0
+US:Nevada,confirmed,323748.0
+US:New Hampshire,death_rate,1.3698213761031013
+US:New Hampshire,death,1352.0
+US:New Hampshire,confirmed,98699.0
+US:New Jersey,death_rate,2.579120356653138
+US:New Jersey,death,26201.0
+US:New Jersey,confirmed,1015889.0
+US:New Mexico,death_rate,2.1018533583800494
+US:New Mexico,death,4263.0
+US:New Mexico,confirmed,202821.0
+US:New York,death_rate,2.535345338413321
+US:New York,death,53269.0
+US:New York,confirmed,2101055.0
+US:North Carolina,death_rate,1.306292538410674
+US:North Carolina,death,13078.0
+US:North Carolina,confirmed,1001154.0
+US:North Dakota,death_rate,1.4038120365737161
+US:North Dakota,death,1543.0
+US:North Dakota,confirmed,109915.0
+US:Northern Mariana Islands,death_rate,1.092896174863388
+US:Northern Mariana Islands,death,2.0
+US:Northern Mariana Islands,confirmed,183.0
+US:Ohio,death_rate,1.8029933993429301
+US:Ohio,death,19861.0
+US:Ohio,confirmed,1101557.0
+US:Oklahoma,death_rate,1.610284974722656
+US:Oklahoma,death,7291.0
+US:Oklahoma,confirmed,452777.0
+US:Oregon,death_rate,1.3263351657918956
+US:Oregon,death,2666.0
+US:Oregon,confirmed,201005.0
+US:Pennsylvania,death_rate,2.260348221648799
+US:Pennsylvania,death,27190.0
+US:Pennsylvania,confirmed,1202912.0
+US:Puerto Rico,death_rate,1.8047467509507211
+US:Puerto Rico,death,2501.0
+US:Puerto Rico,confirmed,138579.0
+US:Rhode Island,death_rate,1.7845963240478966
+US:Rhode Island,death,2708.0
+US:Rhode Island,confirmed,151743.0
+US:South Carolina,death_rate,1.6407156542623524
+US:South Carolina,death,9728.0
+US:South Carolina,confirmed,592912.0
+US:South Dakota,death_rate,1.6188527890981137
+US:South Dakota,death,2010.0
+US:South Dakota,confirmed,124162.0
+US:Tennessee,death_rate,1.442600368042245
+US:Tennessee,death,12441.0
+US:Tennessee,confirmed,862401.0
+US:Texas,death_rate,1.7437664691971617
+US:Texas,death,51491.0
+US:Texas,confirmed,2952861.0
+US:Utah,death_rate,0.5669568388398698
+US:Utah,death,2301.0
+US:Utah,confirmed,405851.0
+US:Vermont,death_rate,1.0537190082644627
+US:Vermont,death,255.0
+US:Vermont,confirmed,24200.0
+US:Virgin Islands,death_rate,0.7844276583381755
+US:Virgin Islands,death,27.0
+US:Virgin Islands,confirmed,3442.0
+US:Virginia,death_rate,1.6529292839528114
+US:Virginia,death,11160.0
+US:Virginia,confirmed,675165.0
+US:Washington,death_rate,1.3227057994856017
+US:Washington,death,5765.0
+US:Washington,confirmed,435849.0
+US:West Virginia,death_rate,1.7490560305542295
+US:West Virginia,death,2821.0
+US:West Virginia,confirmed,161287.0
+US:Wisconsin,death_rate,1.1617158974069848
+US:Wisconsin,death,7830.0
+US:Wisconsin,confirmed,674003.0
+US:Wyoming,death_rate,1.195464219207236
+US:Wyoming,death,719.0
+US:Wyoming,confirmed,60144.0
+Uganda,death_rate,0.7881387298338812
+Uganda,recovery_rate,94.49173760640961
+Uganda,death,362.0
+Uganda,active,25385.0
+Uganda,recovered,43401.0
+Uganda,confirmed,45931.0
+Ukraine,death_rate,2.3213564438523515
+Ukraine,recovery_rate,92.31911542740524
+Ukraine,death,52414.0
+Ukraine,active,427565.0
+Ukraine,recovered,2084477.0
+Ukraine,confirmed,2257904.0
+United Arab Emirates,death_rate,0.2949249290011864
+United Arab Emirates,recovery_rate,96.42934582371845
+United Arab Emirates,death,1673.0
+United Arab Emirates,active,27792.0
+United Arab Emirates,recovered,547008.0
+United Arab Emirates,confirmed,567263.0
+United Kingdom,recovery_rate,0.007676952071493848
+United Kingdom,death_rate,2.851519043416065
+United Kingdom,recovered,344.0
+United Kingdom,death,127775.0
+United Kingdom,active,4352826.0
+United Kingdom,confirmed,4480945.0
+United Kingdom:Anguilla,death,0.0
+United Kingdom:Anguilla,death_rate,0.0
+United Kingdom:Anguilla,active,66.0
+United Kingdom:Anguilla,recovery_rate,100.0
+United Kingdom:Anguilla,confirmed,109.0
+United Kingdom:Anguilla,recovered,109.0
+United Kingdom:Bermuda,death_rate,1.2846246487354476
+United Kingdom:Bermuda,death,32.0
+United Kingdom:Bermuda,recovery_rate,97.27017262143718
+United Kingdom:Bermuda,active,904.0
+United Kingdom:Bermuda,recovered,2423.0
+United Kingdom:Bermuda,confirmed,2491.0
+United Kingdom:British Virgin Islands,death_rate,0.4032258064516129
+United Kingdom:British Virgin Islands,death,1.0
+United Kingdom:British Virgin Islands,active,52.0
+United Kingdom:British Virgin Islands,recovery_rate,84.2741935483871
+United Kingdom:British Virgin Islands,recovered,209.0
+United Kingdom:British Virgin Islands,confirmed,248.0
+United Kingdom:Cayman Islands,death_rate,0.34423407917383825
+United Kingdom:Cayman Islands,death,2.0
+United Kingdom:Cayman Islands,active,77.0
+United Kingdom:Cayman Islands,recovery_rate,97.07401032702238
+United Kingdom:Cayman Islands,recovered,564.0
+United Kingdom:Cayman Islands,confirmed,581.0
+United Kingdom:Channel Islands,death_rate,2.0919484310386767
+United Kingdom:Channel Islands,death,86.0
+United Kingdom:Channel Islands,recovery_rate,96.4485526635855
+United Kingdom:Channel Islands,active,1189.0
+United Kingdom:Channel Islands,recovered,3965.0
+United Kingdom:Channel Islands,confirmed,4111.0
+United Kingdom:Falkland Islands (Malvinas),death,0.0
+United Kingdom:Falkland Islands (Malvinas),death_rate,0.0
+United Kingdom:Falkland Islands (Malvinas),active,15.0
+United Kingdom:Falkland Islands (Malvinas),confirmed,63.0
+United Kingdom:Falkland Islands (Malvinas),recovered,63.0
+United Kingdom:Falkland Islands (Malvinas),recovery_rate,100.0
+United Kingdom:Gibraltar,death_rate,2.1896109946424414
+United Kingdom:Gibraltar,death,94.0
+United Kingdom:Gibraltar,recovery_rate,97.64733286745866
+United Kingdom:Gibraltar,active,1317.0
+United Kingdom:Gibraltar,recovered,4192.0
+United Kingdom:Gibraltar,confirmed,4293.0
+United Kingdom:Isle of Man,death_rate,1.8216080402010049
+United Kingdom:Isle of Man,death,29.0
+United Kingdom:Isle of Man,recovery_rate,98.05276381909547
+United Kingdom:Isle of Man,active,903.0
+United Kingdom:Isle of Man,recovered,1561.0
+United Kingdom:Isle of Man,confirmed,1592.0
+United Kingdom:Montserrat,death,1.0
+United Kingdom:Montserrat,death_rate,5.0
+United Kingdom:Montserrat,active,10.0
+United Kingdom:Montserrat,recovered,19.0
+United Kingdom:Montserrat,confirmed,20.0
+United Kingdom:Montserrat,recovery_rate,95.0
+"United Kingdom:Saint Helena, Ascension and Tristan da Cunha",death,1.0
+"United Kingdom:Saint Helena, Ascension and Tristan da Cunha",active,2.0
+"United Kingdom:Saint Helena, Ascension and Tristan da Cunha",confirmed,4.0
+"United Kingdom:Saint Helena, Ascension and Tristan da Cunha",recovered,4.0
+"United Kingdom:Saint Helena, Ascension and Tristan da Cunha",death_rate,25.0
+"United Kingdom:Saint Helena, Ascension and Tristan da Cunha",recovery_rate,100.0
+United Kingdom:Turks and Caicos Islands,death_rate,0.7048092868988391
+United Kingdom:Turks and Caicos Islands,death,17.0
+United Kingdom:Turks and Caicos Islands,recovery_rate,98.71475953565506
+United Kingdom:Turks and Caicos Islands,active,395.0
+United Kingdom:Turks and Caicos Islands,recovered,2381.0
+United Kingdom:Turks and Caicos Islands,confirmed,2412.0
+Uruguay,death_rate,1.449134544646947
+Uruguay,recovery_rate,85.47707619060839
+Uruguay,death,4176.0
+Uruguay,active,37675.0
+Uruguay,recovered,246321.0
+Uruguay,confirmed,288172.0
+Uzbekistan,death_rate,0.6890749569328152
+Uzbekistan,recovery_rate,95.67825808260886
+Uzbekistan,death,688.0
+Uzbekistan,active,9549.0
+Uzbekistan,recovered,95529.0
+Uzbekistan,confirmed,99844.0
+Vanuatu,death,1.0
+Vanuatu,active,2.0
+Vanuatu,recovered,3.0
+Vanuatu,confirmed,4.0
+Vanuatu,death_rate,25.0
+Vanuatu,recovery_rate,75.0
+Venezuela,death_rate,1.1298678292279307
+Venezuela,recovery_rate,92.18900550027436
+Venezuela,death,2615.0
+Venezuela,active,17594.0
+Venezuela,recovered,213365.0
+Venezuela,confirmed,231443.0
+Vietnam,death_rate,0.6803705848291836
+Vietnam,recovery_rate,41.92240880138969
+Vietnam,death,47.0
+Vietnam,recovered,2896.0
+Vietnam,active,3965.0
+Vietnam,confirmed,6908.0
+West Bank and Gaza,death_rate,1.1343628791767097
+West Bank and Gaza,recovery_rate,97.62407500048727
+West Bank and Gaza,death,3492.0
+West Bank and Gaza,active,33275.0
+West Bank and Gaza,recovered,300524.0
+West Bank and Gaza,confirmed,307838.0
+Yemen,death_rate,19.59589956915763
+Yemen,recovery_rate,50.49769722180953
+Yemen,death,1319.0
+Yemen,active,2504.0
+Yemen,recovered,3399.0
+Yemen,confirmed,6731.0
+Zambia,death_rate,1.3466876339036
+Zambia,recovery_rate,96.66810904370402
+Zambia,death,1276.0
+Zambia,active,10900.0
+Zambia,recovered,91594.0
+Zambia,confirmed,94751.0
+Zimbabwe,death_rate,4.0942131353864335
+Zimbabwe,recovery_rate,93.95114684201063
+Zimbabwe,death,1594.0
+Zimbabwe,active,10326.0
+Zimbabwe,recovered,36578.0
+Zimbabwe,confirmed,38933.0

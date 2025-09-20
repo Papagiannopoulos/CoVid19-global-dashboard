@@ -46,8 +46,8 @@ st.markdown("""
 def load_data():
     """Load the processed COVID-19 data from notebook output"""
     try:
-        datalong = pd.read_csv('../Output/datalong.csv')
-        total_per_country_wide = pd.read_csv('../Output/total_per_country_wide.csv')
+        datalong = pd.read_csv('Output/datalong.csv')
+        total_per_country_wide = pd.read_csv('Output/total_per_country_wide.csv')
         datalong['Date'] = pd.to_datetime(datalong['Date'])
         
         if 'Daily_cases' not in datalong.columns:
