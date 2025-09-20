@@ -123,5 +123,5 @@ uv sync
 
 #### 5. You are ready!!!  
 1) Run data_cleaning.ipynb to reproduce input/output  
-2) In your:  
-powershell run streamlitApp.py
+2) In your powershell:  
+streamlit run streamlitApp.py
