@@ -1,5 +1,6 @@
 # 🦠 **COVID-19 Globe Dashboard** 
 #### 🎯 ***Aim***: Visualize and analyze daily level COVID-19 cases worldwide through interactive web application built with **Streamlit**. <img src="https://streamlit.io/images/brand/streamlit-logo-secondary-colormark-darktext.png" width="60"/>  
+[App](https://papagiannopoulos-covid19-global-das-programsstreamlitapp-npoo84.streamlit.app/)  
 
 ## Project Summary 
 This dashboard provides (real-time) insights into the pandemic's progression overtime from Jan/20 till May/21.
